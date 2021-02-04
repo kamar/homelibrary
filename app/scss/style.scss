@@ -1,0 +1,36 @@
+@import "books";
+@import "variables";
+@import "topbutton";
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+*, *:after, *:before{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: url('/images/pexels-cottonbro-6344226.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: whitesmoke;
+    padding-bottom: 1rem;
+}
+
+p{
+    font-weight: 400;
+    color: wheat;
+}

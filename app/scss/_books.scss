@@ -1,0 +1,40 @@
+  
+  /* (B) BOOKS */
+  #our-books {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    align-items: stretch;
+    grid-gap: 10px;
+  }
+  
+  
+  #our-books .book-wrap {
+    background: #f1f1f1;
+    padding: 15px;
+    border: 1px solid #808080;
+    border-radius: 8px;
+  }
+  
+  #our-books .book-wrap:hover {
+    cursor: pointer;
+    background: #fdffe6;
+  }
+  
+  #our-books .book-title {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .book-isbn{
+    padding-top: 10px;
+    font: weight 400;
+    color: darkblue;
+  }
+  
+  #our-books .book-desc {
+    margin-top: 10px;
+    color: #848484;
+  }
