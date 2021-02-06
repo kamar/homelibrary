@@ -27,6 +27,18 @@ function jsTask(){
     .pipe(dest('dist', { sourcemaps: '.' }));
 }
 
+function copyToServer(){
+  return src(['dist/*.*'])
+    .pipe(dest('/opt/lampp/docs/homelibrary/dist'))
+    .pipe(src(['dist/php/*.php'], {"base": "."}))
+    .pipe(dest('/opt/lampp/docs/homelibrary/dist/php'))
+    .pipe(src(['images/*.*'], {"base": "."}))
+    .pipe(dest('/opt/lampp/docs/homelibrary/images'))
+    .pipe(src(['index.php'], {"base": "."}))
+    .pipe(dest('/opt/lampp/docs/homelibrary'));
+
+}
+
 // Browsersync Tasks
 function browsersyncServe(cb){
   browsersync.init({
@@ -47,7 +59,7 @@ function browsersyncReload(cb){
 function watchTask(){
   watch('*.html', browsersyncReload);
   watch('*.php', browsersyncReload);
-  watch(['app/scss/**/*.scss', 'app/js/**/*.js', 'app/php/**/*.php'], series(scssTask, jsTask, copyPHP, browsersyncReload));
+  watch(['app/scss/**/*.scss', 'app/js/**/*.js', 'app/php/**/*.php'], series(scssTask, jsTask, copyPHP, copyToServer, browsersyncReload));
 }
 
 // Default Gulp task
@@ -55,6 +67,7 @@ exports.default = series(
   scssTask,
   jsTask,
   copyPHP, 
+  copyToServer,
   browsersyncServe,
   watchTask
 );

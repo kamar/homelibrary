@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1440"
+   height="700"
+   viewBox="0 0 381.00001 185.20833"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (1.0.2+r75+1)"
+   sodipodi:docname="bg.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1945">
+      <stop
+         style="stop-color:#00ffff;stop-opacity:1;"
+         offset="0"
+         id="stop1941" />
+      <stop
+         style="stop-color:#00ffff;stop-opacity:0;"
+         offset="1"
+         id="stop1943" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1933">
+      <stop
+         style="stop-color:#ff00ff;stop-opacity:1;"
+         offset="0"
+         id="stop1929" />
+      <stop
+         style="stop-color:#ff00ff;stop-opacity:0;"
+         offset="1"
+         id="stop1931" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient16">
+      <stop
+         style="stop-color:#008080;stop-opacity:1"
+         offset="0"
+         id="stop12" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop14" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient16"
+       id="linearGradient18"
+       x1="-0.77674584"
+       y1="150.70222"
+       x2="380.91851"
+       y2="150.70222"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1933"
+       id="radialGradient1937"
+       cx="101.27612"
+       cy="259.40717"
+       fx="101.27612"
+       fy="259.40717"
+       r="38.900661"
+       gradientTransform="matrix(1.4550876,-0.58273754,0.36375882,0.90830034,-140.45115,82.728848)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1945"
+       id="radialGradient1949"
+       cx="356.15732"
+       cy="209.15575"
+       fx="356.15732"
+       fy="209.15575"
+       r="40"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-1.9921343,-1.0108262,0.45248913,-0.89176992,971.02984,755.68769)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="677.53846"
+     inkscape:cy="358.89041"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:snap-others="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="737"
+     inkscape:window-x="-3"
+     inkscape:window-y="31"
+     inkscape:window-maximized="0"
+     inkscape:document-rotation="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-111.79168)">
+    <path
+       style="fill:url(#linearGradient18);stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m -0.52916666,111.79168 c 0,0 78.31666566,116.94583 111.65416666,65.0875 33.3375,-51.85833 118.00416,10.58333 118.00416,10.58333 0,0 -38.1,-75.14166 65.61667,-52.3875 103.71666,22.75417 84.66667,-23.8125 84.66667,-23.8125 z"
+       id="path10"
+       inkscape:connector-curvature="0" />
+    <ellipse
+       style="fill:url(#radialGradient1937);stroke-width:0.264583;fill-opacity:1"
+       id="path1927"
+       cx="122.32335"
+       cy="255.87885"
+       rx="38.900661"
+       ry="38.061668" />
+    <circle
+       style="fill:url(#radialGradient1949);stroke-width:0.264583;fill-opacity:1"
+       id="path1939"
+       cx="312.29825"
+       cy="199.00829"
+       r="40" />
+  </g>
+</svg>

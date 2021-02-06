@@ -7,12 +7,13 @@
         border: none; /* Remove borders */
         outline: none; /* Remove outline */
         background: rgba(85, 85, 85, .9);
+        color: #fff;
         cursor: pointer; /* Add a mouse pointer on hover */
         padding: 15px; /* Some padding */
         border-radius: 20px; /* Rounded corners */
     
         &:hover {
             background-color: #fafafa; /* Add a dark-grey background on hover */
-            color: white;
+            color: #000;
         }
 }
