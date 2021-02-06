@@ -28,13 +28,7 @@ function jsTask(){
 }
 
 function copyToServer(){
-  return src(['dist/*.*'])
-    .pipe(dest('/opt/lampp/docs/homelibrary/dist'))
-    .pipe(src(['dist/php/*.php'], {"base": "."}))
-    .pipe(dest('/opt/lampp/docs/homelibrary/dist/php'))
-    .pipe(src(['images/*.*'], {"base": "."}))
-    .pipe(dest('/opt/lampp/docs/homelibrary/images'))
-    .pipe(src(['index.php'], {"base": "."}))
+  return src(['dist/*.*', 'dist/php/*.php', 'images/*.*', 'pages/*.*', 'index.php'], {"base": "."})
     .pipe(dest('/opt/lampp/docs/homelibrary'));
 
 }

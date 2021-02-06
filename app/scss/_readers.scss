@@ -1,0 +1,18 @@
+table, th, td{
+    border: 1px solid #010101;
+    border-collapse: collapse;
+
+    th, td{
+        padding: 5px;
+    }
+
+}
+
+#readers{
+    background-color: azure;
+    opacity: .6;
+
+    td:nth-child(6){
+        text-align: center;
+    }
+}
