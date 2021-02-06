@@ -1,0 +1,19 @@
+nav{
+    width: 100%;
+    height: 3rem;
+    background: #000fff;
+}
+
+.header{
+    &__menu{
+        padding-top: 1rem;
+        // color:aliceblue;
+        
+        a{
+            padding: 1rem;
+            font-weight: 700;
+            color:aliceblue;
+            text-decoration: none;
+        }
+    }
+}

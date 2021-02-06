@@ -6,13 +6,13 @@
         z-index: 99; /* Make sure it does not overlap */
         border: none; /* Remove borders */
         outline: none; /* Remove outline */
-        background: rgba(228, 22, 25, 1.0);
+        background: rgba(85, 85, 85, .9);
         cursor: pointer; /* Add a mouse pointer on hover */
         padding: 15px; /* Some padding */
         border-radius: 20px; /* Rounded corners */
     
         &:hover {
-            background-color: #555; /* Add a dark-grey background on hover */
+            background-color: #fafafa; /* Add a dark-grey background on hover */
             color: white;
         }
 }
