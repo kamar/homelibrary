@@ -1,0 +1,34 @@
+#reader-bookloan {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    align-items: stretch;
+    grid-gap: 10px;
+  }
+  
+#bookloan{
+    width: 100%;
+    background-color: azure;
+    opacity: .6;
+    td{
+        &:nth-child(1){
+            text-align: right;
+        }
+        &:nth-child(4){
+            text-align: center;
+        }
+        &:nth-child(5){
+            text-align: center;
+        }
+        &:nth-child(6){
+            text-align: center;
+        }
+        &:nth-child(7){
+            text-align: right;
+        }
+    }
+    tr:nth-child(even){
+        background-color: #f2f2f2;
+    }
+}
