@@ -1,3 +1,11 @@
+// TODO: Review this.
+caption{
+    padding: 1.5rem;
+    font-weight: 700;
+    color: antiquewhite;
+    text-align: left;
+}
+
 #reader-bookloan {
     max-width: 1200px;
     margin: auto;
@@ -8,9 +16,11 @@
   }
   
 #bookloan{
-    width: 100%;
+    width: 90%;
     background-color: azure;
-    opacity: .6;
+    opacity: .8;
+    font-size: .9rem;
+    
     td{
         &:nth-child(1){
             text-align: right;

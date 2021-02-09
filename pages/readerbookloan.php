@@ -16,7 +16,7 @@
     <nav>
     <div class="header__menu has-fade">
       <a href="/">Home</a>
-      <a href="readers.php">Readers</a>
+      <a href="readers">Readers</a>
       <a href="#">Contact</a>
       <a href="#">Blog</a>
       <a href="#">Careers</a>
@@ -25,12 +25,13 @@
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <!-- (B) READERS LIST -->
-    
     <!-- <div id="reader-bookloan"> -->
       <?php
       // TODO: Add reader's Fullname as caption.
       session_start();
       $_SESSION['reader_id'] = $_GET['r_id'];
+      // $_SESSION['full_name'] = $_GET['full_name'];
+      echo "<h1>Αναγνώστης: ".$_GET['full_name']."</h1>";
       require "../dist/php/reader_bookloan.php";
       ?>
       <!-- Script section -->

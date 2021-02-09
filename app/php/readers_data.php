@@ -11,10 +11,10 @@
 <?php
     
     foreach ($reader as $r){
-        echo '<div class="reader-wrap" data-id="'.$r['reader_id'].'">';
+        echo '<a  href="readerbookloan?r_id='.$r['reader_id'].'&full_name='.$r['surname'].' '.$r['firstname'].'"><div class="reader-wrap" data-id="'.$r['reader_id'].'">';
         
-        echo '  <a  href="readerbookloan.php?r_id='.$r['reader_id'].'"><div class="reader-fullname">'.$r['surname'].' '.$r['firstname'].'</div></a>';
+        echo '  <div class="reader-fullname">'.$r['surname'].' '.$r['firstname'].'</div>';
         echo '  <div class="reader-address">'.$r['address'].'<br>'.$r['postal_code'].' '.$r['city'].'</div>';
-        echo '</div>';
+        echo '</div></a>';
     }
 ?>
