@@ -16,7 +16,7 @@ Column
     // session_start();
     require 'connect.php';
     $param = array($_SESSION['reader_id']);
-    $query = "SELECT bl.loan_id, bl.reader_id, bl.isbn, bl.startdate, bl.enddate, bl.returndate, bl.delay,
+    $query = "SELECT bl.loan_id, bl.reader_id, bl.isbn, to_char(bl.startdate, 'DD-MM-YYYY') AS startdate, to_char(bl.enddate, 'DD-MM-YYYY') AS enddate, to_char(bl.returndate, 'DD-MM-YYYY') AS returndate, to_char(bl.delay, '999 \"ημέρες\"') AS delay,
      CASE
          WHEN bl.returned = 't' THEN 'Επιστράφηκε'
          WHEN bl.returned = 'f' THEN 'Δεν επιστράφηκε'
