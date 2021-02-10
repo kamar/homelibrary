@@ -28,18 +28,19 @@ table, th, td{
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     align-items: stretch;
     grid-gap: 10px;
+    
+    & a{
+      text-decoration: none;
+    }
   }
   
   
   #our-readers .reader-wrap {
-    background: #f1f1f1;
+    background: #b8932f;
     padding: 15px;
     border: 1px solid #808080;
     border-radius: 8px;
-
-    a{
-      text-decoration: none;
-    }
+    
   }
   
   #our-readers .reader-wrap:hover {
@@ -61,5 +62,5 @@ table, th, td{
   
   #our-readers .reader-address {
     margin-top: 10px;
-    color: #848484;
+    color: #010101;
   }
