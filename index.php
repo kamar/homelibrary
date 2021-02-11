@@ -29,8 +29,8 @@
     <p>Κάντε κλικ πάνω στο βιβλίο.</p>
     <div id="our-books">
       <?php
-      error_reporting(E_ALL);
-      ini_set("display_errors", true);
+      // error_reporting(E_ALL);
+      // ini_set("display_errors", true);
       require "dist/php/books.php";
       ?>
       <!-- Script section -->
