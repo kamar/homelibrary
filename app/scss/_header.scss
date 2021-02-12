@@ -1,8 +1,10 @@
 nav{
-    width: 100%;
+    width: max-content;
     height: 3rem;
-    background: rgba(184, 147, 47, 0.6);
-}
+    background: rgba(79, 62, 19, 0.6);
+    position: sticky;
+    top: 0;
+    }
 
 .header{
     &__menu{

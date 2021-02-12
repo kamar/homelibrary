@@ -8,7 +8,8 @@
       $book = pg_fetch_all($rs);
 
       foreach ($book as $p) { 
-      echo '<div class="book-wrap" data-id="'.$p['isbn'].'">';
+      echo '<div class="book-wrap tooltip" data-id="'.$p['isbn'].'">';
+      echo '<span class="tooltiptext">Κάντε κλικ για λεπτομέρειες.</span>';
       echo '  <div class="book-title">'.$p['title'].'</div>';
       echo '  <div class="book-isbn">'.$p['isbn'].'</div>';
       if (strlen($p['back_page'])> 0){
