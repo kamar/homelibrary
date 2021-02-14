@@ -43,7 +43,7 @@
       <?php include '../dist/php/scripts.php'; ?>
     <div class="container">
     <h2>Εισαγωγή Βιβλίου</h2>
-      <form action="" method="post">
+      <form action="/dist/php/insert_book" method="post">
         <div class="row">
           <div class="col-25"><label for="isbn">ISBN:</label></div>
           <div class="col-75"><input type="text" id="isbn" name="isbn" placeholder="Καταχωρείστε το ISBN  του βιβλίου."></div>
@@ -150,7 +150,7 @@
         </div>
         <div class="row">
           <div class="col-25"><label for="in_stock">Διαθέσιμο:</label></div>
-          <div class="col-75"><input type="checkbox" name="in_stock" id="in_stock" value="1"></div>
+          <div class="col-75"><input type="checkbox" name="in_stock" id="in_stock" value="t"></div>
         </div>
         <div class="row">
       <input type="submit" value="Καταχώρηση">
