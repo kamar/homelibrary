@@ -4,7 +4,7 @@
     <title>
       Οικιακή Βιβλιοθήκη
     </title>
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
@@ -158,8 +158,9 @@
       </form>
     </div>  
     <!-- Script section -->
-    <script src="/..dist/script.js"></script>
-    <script src="../dist/scroll.js"></script>
+    <!-- <script src="/..dist/script.js"></script> -->
+    <!-- <script src="../dist/scroll.js"></script> -->
     <!-- </div> -->
+    <script src="/dist/functions.js"></script>
   </body>
 </html>
