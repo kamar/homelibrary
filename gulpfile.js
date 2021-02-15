@@ -28,7 +28,7 @@ function jsTask(){
 }
 
 function copyToServer(){
-  return src(['dist/*.*', 'dist/php/*.php', 'images/*.*', 'pages/*.*', './index.php'], {"base": "."})
+  return src(['dist/*.*', 'dist/php/*.php', 'images/*.*', 'ics/*.*', 'pages/*.*', './index.php'], {"base": "."})
     .pipe(dest('/opt/lampp/docs/homelibrary'));
 
 }
