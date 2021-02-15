@@ -35,6 +35,16 @@
         die();
     }
 
+    $con = con_homelibrary();
+    
+    // TODO: Complete the query.
+    $result = pg_prepare($con, "newbook", 'INSERT INTO tbl_books (isbn, isbn10, title, publisher_id, year, pages, back_page, category_id, translated, translator_id, eidos_grafis_id, copies_standard, copies_avail, in_stock) 
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)');
+    
+    $params = array( $isbn, $isbn10, $title, $publisher_id, $year, $pages, $back_page, $category_id, $translated, $translator_id, $eidos_grafis_id, $copies_standard, $copies_avail, $in_stock);
+
+    $result = pg_execute($con, "newbook", $params);
+    
     echo "ISBN: ".$isbn."<br>";
     echo "ISBN10: $isbn10<br>";
     echo "Title: $title<br>";
@@ -49,6 +59,8 @@
     echo "Copies: $copies_standard<br>";
     echo "Copies Available: $copies_avail<br>";
     echo "In stock: $in_stock";
+
+    pg_close($con);
     ?>
   </body>
 </html>
