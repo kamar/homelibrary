@@ -7,4 +7,11 @@ function fill_available(){
     }
 }
 
-input_copies_standard.addEventListener('change', fill_available)
+function disable_mnu(){
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+    document.getElementById(page).setAttribute("class", disabled)
+}
+
+// input_copies_standard.addEventListener('change', fill_available)
+document.addEventListener("load", disable_mnu)

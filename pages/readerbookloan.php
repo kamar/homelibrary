@@ -12,8 +12,9 @@
       require_once '../ics/footer.php';
       ?>
       <!-- Script section -->
-      <script src="/..dist/script.js"></script>
-      <script src="../dist/scroll.js"></script>
+      <script src="/dist/functions.js"></script>
+      <script src="/dist/script.js"></script>
+      <script src="/dist/scroll.js"></script>
     <!-- </div> -->
   </body>
 </html>

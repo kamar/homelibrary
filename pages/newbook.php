@@ -119,7 +119,7 @@
         </div>
         <div class="row">
           <div class="col-25"><label for="copies_standard">Αντίτυπα:</label></div>
-          <div class="col-75"><input type="text" name="copies_standard" id="copies_standard"></div>
+          <div class="col-75"><input type="text" name="copies_standard" id="copies_standard" onchange="fill_available()"></div>
         </div>
         <div class="row">
           <div class="col-25"><label for="copies_avail">Διαθέσιμα αντίγραφα:</label></div>

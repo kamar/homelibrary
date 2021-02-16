@@ -14,9 +14,9 @@
   <body>
       <nav>
           <div class="header__menu has-fade">
-              <a href="/">Home</a>
-              <a href="/pages/readers"">Readers</a>
-              <a href="/pages/newbook">Εισαγωγή Βιβλίου</a>
+              <a href="/" id="home">Home</a>
+              <a href="/pages/readers" id="readers">Readers</a>
+              <a href="/pages/newbook" id="newbook">Εισαγωγή Βιβλίου</a>
               <a href="#">Blog</a>
               <a href="#">Careers</a>
             </div>
