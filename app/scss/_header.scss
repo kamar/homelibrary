@@ -14,16 +14,21 @@ nav{
         a{
             padding: 1rem;
             font-weight: 700;
-            color:rgb(79, 166, 241);
+            color: #441503;
+            // color:rgb(79, 166, 241);
             text-decoration: none;
 
+            &:hover{
+                background: #441503;
+                color: #6e6242;
+            }
         }
     }
 }
 
-.disabled{
-    pointer-events: none;
+.active{
+    // pointer-events: none;
     /* for "disabled" effect */
-    opacity: 0.5;
-    background: #CCC;
+    background: #441503;
+    color: #6e6242;
 }

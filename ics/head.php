@@ -13,12 +13,12 @@
   </head>
   <body>
       <nav>
-          <div class="header__menu has-fade">
-              <a href="/" id="home">Home</a>
-              <a href="/pages/readers" id="readers">Readers</a>
-              <a href="/pages/newbook" id="newbook">Εισαγωγή Βιβλίου</a>
-              <a href="#">Blog</a>
-              <a href="#">Careers</a>
+          <div class="header__menu has-fade" id="mymenu">
+              <a href="/"  id="home" class="btn">Home</a>
+              <a href="/pages/readers" id="readers" class="btn"">Readers</a>
+              <a href="/pages/newbook" id="newbook" class="btn">Εισαγωγή Βιβλίου</a>
+              <a href="#">Update Book</a>
+              <a href="#">Delete Book</a>
             </div>
         </nav>
         
