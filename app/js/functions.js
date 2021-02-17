@@ -7,6 +7,14 @@ function fill_available(){
     }
 }
 
+function val_form(){
+    if (document.forms["newbook"]["isbn"].value == "") and (document.forms["newbook"]["isbn10"].value == "");{
+        document.getElementsByClassName("form_error").item(3).innerHTML = "* Το πεδίο πρέπει να είναι συμπληρωμένο."
+
+        return false
+    }
+}
+
 // function active_mnu(){
 //     // var path = window.location.pathname;
 //     // var page = path.split("/").pop();
