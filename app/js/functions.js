@@ -8,9 +8,28 @@ function fill_available(){
 }
 
 function val_form(){
-    if (document.forms["newbook"]["isbn"].value == "") and (document.forms["newbook"]["isbn10"].value == "");{
-        document.getElementsByClassName("form_error").item(3).innerHTML = "* Το πεδίο πρέπει να είναι συμπληρωμένο."
+    if (document.forms["newbook"]["isbn"].value == "" && document.forms["newbook"]["isbn10"].value == ""){
+        document.getElementsByClassName("form_error").item(0).innerHTML = "* Το πεδίο ISBN ή ISBN10 πρέπει να είναι συμπληρωμένο."
+        return false
+    }
 
+    if (document.forms["newbook"]["title"].value == "") {
+        document.getElementsByClassName("form_error").item(1).innerHTML = "* Το πεδίο Title πρέπει να είναι συμπληρωμένο."
+        return false
+    }
+
+    if (document.forms["newbook"]["publisher_id"].value == "") {
+        document.getElementsByClassName("form_error").item(2).innerHTML = "* Το πεδίο Publisher πρέπει να είναι συμπληρωμένο."
+        return false
+    }
+
+    if (document.forms["newbook"]["category_id"].value == "") {
+        document.getElementsByClassName("form_error").item(3).innerHTML = "* Το πεδίο Category πρέπει να είναι συμπληρωμένο."
+        return false
+    }
+
+    if (document.forms["newbook"]["eidos_grafis_id"].value == "") {
+        document.getElementsByClassName("form_error").item(4).innerHTML = "* Το πεδίο πρέπει να είναι συμπληρωμένο."
         return false
     }
 }
