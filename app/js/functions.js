@@ -34,6 +34,28 @@ function val_form(){
     }
 }
 
+function toggle_inputs(status=true){
+    var inputs = document.getElementsByTagName('input')
+    for (i=1;i<inputs.length;i++){
+        inputs[i].disabled = status
+    }
+}
+
+function showHint(str) {
+    if (str.length == 0) {
+      document.getElementById("txtHint").innerHTML = "";
+      return;
+    } else {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("txtHint").innerHTML = this.responseText;
+        }
+      };
+      xmlhttp.open("GET", "/dist/php/hints?q=" + str, true);
+      xmlhttp.send();
+    }
+  }
 // function active_mnu(){
 //     // var path = window.location.pathname;
 //     // var page = path.split("/").pop();

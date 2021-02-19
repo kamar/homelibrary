@@ -17,7 +17,7 @@
               <a href="/"  id="home" class="btn">Home</a>
               <a href="/pages/readers" id="readers" class="btn"">Readers</a>
               <a href="/pages/newbook" id="newbook" class="btn">Εισαγωγή Βιβλίου</a>
-              <a href="#">Update Book</a>
+              <a href="/pages/updatebook">Update Book</a>
               <a href="#">Delete Book</a>
             </div>
         </nav>

@@ -41,6 +41,18 @@ function get_eidosgrafis(){
     return $eidosgrafis;
 }
 
+function get_isbns(){
+    $con = con_homelibrary();
+    $query = "SELECT isbn FROM tbl_books ORDER BY isbn";
+    $rs = pg_query($con, $query) or die("Cannot execute query: $query\n");
+    $isbns = pg_fetch_all($rs);
+    
+    $nisbns = [];
+    foreach ($isbns as $b){
+        $nisbns[] = $b['isbn'];
+    }
+    return $nisbns;
+}
 // $publishers = get_publishers(); 
 // foreach($publishers as $a){
 //     echo $a['publisher_id'].' '.$a['name'];

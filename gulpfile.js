@@ -28,15 +28,9 @@ function jsTask(){
 }
 
 function copyToServer(){
-<<<<<<< HEAD
-  return src(['dist/*.*', 'dist/php/*.php', 'images/*.*', 'pages/*.*', 'index.php'], {"base": "."})
-    .pipe(dest('/var/www/homelibrary'));
-// '/var/www/homelibrary'
-=======
-  return src(['dist/*.*', 'dist/php/*.php', 'images/*.*', 'ics/*.*', 'pages/*.*', './index.php'], {"base": "."})
-    .pipe(dest('/opt/lampp/docs/homelibrary'));
-
->>>>>>> refs/remotes/origin/main
+  return src(['dist/*.*', 'dist/php/*.php', 'images/*.*', 'ics/*.php', 'pages/*.*', './index.php'], {"base": "."})
+  .pipe(dest('/opt/lampp/docs/homelibrary'));
+  // '/var/www/homelibrary'
 }
 
 // Browsersync Tasks
