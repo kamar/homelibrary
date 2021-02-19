@@ -2,12 +2,16 @@
 @import "variables";
 @import "topbutton";
 @import "header";
+@import "footer";
 @import "readers";
 @import "reader_bookloan";
+@import "forms";
+// @import "tooltip";
 
 html {
     box-sizing: border-box;
     font-size: 100%;
+    color:#97c5ad;  // Change it.
     scroll-behavior: smooth;
 }
 
@@ -37,4 +41,3 @@ p{
     font-weight: 400;
     color: wheat;
 }
-

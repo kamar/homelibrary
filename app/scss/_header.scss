@@ -1,8 +1,10 @@
 nav{
-    width: 100%;
+    width: max-content;
     height: 3rem;
-    background: rgba(184, 147, 47, 0.6);
-}
+    background: rgba(138, 123, 83, 0.8);
+    position: sticky;
+    top: 0;
+    }
 
 .header{
     &__menu{
@@ -12,8 +14,21 @@ nav{
         a{
             padding: 1rem;
             font-weight: 700;
-            color:aliceblue;
+            color: #441503;
+            // color:rgb(79, 166, 241);
             text-decoration: none;
+
+            &:hover{
+                background: #441503;
+                color: #6e6242;
+            }
         }
     }
+}
+
+.active{
+    // pointer-events: none;
+    /* for "disabled" effect */
+    background: #441503;
+    color: #6e6242;
 }

@@ -1,4 +1,6 @@
-window.addEventListener("load", function(){
+window.addEventListener("load", book_details);
+
+  function book_details(){
     for (let book of document.getElementsByClassName("book-wrap")) {
       book.addEventListener("click", function(){
         var id = this.dataset.id,
@@ -9,4 +11,4 @@ window.addEventListener("load", function(){
         alert(`You have selected - ISBN: ${id}\n TITLE: ${name}\n PAGES: ${desc}`);
       });
     }
-  });
+  }
