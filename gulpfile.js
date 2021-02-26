@@ -27,6 +27,7 @@ function jsTask(){
     .pipe(dest('dist', { sourcemaps: '.' }));
 }
 
+//Copy files to Server
 function copyToServer(){
   return src(['dist/*.*', 'dist/php/*.php', 'images/*.*', 'ics/*.php', 'pages/*.*', './index.php'], {"base": "."})
   .pipe(dest('/opt/lampp/docs/homelibrary'));
