@@ -1,14 +1,16 @@
 nav{
-    width: max-content;
-    height: 3rem;
+    width: fit-content;
+    height: auto;
     background: rgba(138, 123, 83, 0.8);
     position: sticky;
     top: 0;
+    overflow: hidden;
     }
 
 .header{
     &__menu{
         padding-top: 1rem;
+        padding-bottom: 1rem;
         // color:aliceblue;
         
         a{
