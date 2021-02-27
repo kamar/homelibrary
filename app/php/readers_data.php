@@ -2,10 +2,9 @@
     require "connect.php";
 
     $query = "SELECT reader_id, surname, firstname,  father_name, mother_name, address, postal_code, city FROM tbl_readers ORDER BY surname, firstname"; 
-    $con = con_homelibrary();
-    $rs = pg_query($con, $query) or die("Cannot execute query: $query\n");
-    
-    $reader = pg_fetch_all($rs);
+    $con = pdo_homelibrary();
+    $reader = $con->query($query) or die("Cannot execute query: $query\n");
+    $con = null;
 ?>    
 
 <?php

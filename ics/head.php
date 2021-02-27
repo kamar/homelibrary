@@ -16,7 +16,7 @@
   <body>
       <nav>
           <div class="header__menu has-fade" id="mymenu">
-              <a href="/"  id="home" class="btn"><i class="glyphicon glyphicon-user">Home</i></a>
+              <a href="/"  id="home" class="btn"><i class="glyphicon glyphicon-user"></i>Home</a>
               <a href="/pages/readers" id="readers" class="btn"">Readers</a>
               <a href="/pages/newbook" id="newbook" class="btn">Εισαγωγή Βιβλίου</a>
               <a href="/pages/updatebook">Update Book</a>

@@ -2,11 +2,9 @@
       require "connect.php";
       
       $query = "SELECT isbn, title, pages, back_page FROM tbl_books ORDER BY isbn"; 
-      $con = con_homelibrary();
-      $rs = pg_query($con, $query) or die("Cannot execute query: $query\n");
+      $con = pdo_homelibrary();
+      $book = $con -> query($query) or die("Cannot execute query: $query\n");
       
-      $book = pg_fetch_all($rs);
-
       foreach ($book as $p) { 
       echo '<div class="book-wrap tooltip" data-id="'.$p['isbn'].'">';
       echo '<span class="tooltiptext">Κάντε κλικ για λεπτομέρειες.</span>';
@@ -23,4 +21,5 @@
       }
       
       echo '</div>';
+      $con = null;
       } ?>

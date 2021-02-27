@@ -25,11 +25,12 @@ Column
      FROM 
      tbl_bookloan bl, tbl_books b
      WHERE bl.isbn = b.isbn 
-     AND bl.reader_id = $1";
+     AND bl.reader_id =:reader_id";
     // $query = 'SELECT * FROM tbl_bookloan WHERE reader_id = $1';
-    $con = con_homelibrary();
-    $rs = pg_query_params($con, $query, $param) or die("Cannot execute query: $query\n");
-    $r_bookloan = pg_fetch_all($rs);
+    $con = pdo_homelibrary();
+    $rs = $con->prepare($query); // or die("Cannot execute query: $query\n");
+    $rs->execute($param);
+    $r_bookloan = $rs->fetchAll();
 ?>
 <table id="bookloan">
 <tr>
