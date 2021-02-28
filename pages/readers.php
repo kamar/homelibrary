@@ -1,4 +1,6 @@
-<?php require_once '../ics/head.php';?>
+<?php 
+  session_start();
+  require_once '../ics/head.php';?>
     <!-- (B) READERS LIST -->
     <h1>Αναγνώστες</h1>
     <div id="our-readers">

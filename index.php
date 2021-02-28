@@ -1,4 +1,7 @@
-<?php require_once('ics/head.php'); ?>
+<?php 
+    session_start();
+    require_once('ics/head.php');
+?>
     <!-- (B) BOOKS LIST -->
     <h1>Διαθέσιμα Βιβλία</h1>
     <p>Κάντε κλικ πάνω στο βιβλίο.</p>

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<?php require_once '../ics/head.php'; ?>
+<?php 
+  session_start();
+  require_once '../ics/head.php';
+?>
     <!-- (B) READERS LIST -->
     <!-- <div id="reader-bookloan"> -->
       <?php
       // TODO: Add reader's Fullname as caption.
-      session_start();
       $_SESSION['reader_id'] = $_GET['r_id'];
       // $_SESSION['full_name'] = $_GET['full_name'];
       echo "<h1>Αναγνώστης: ".$_GET['full_name']."</h1>";

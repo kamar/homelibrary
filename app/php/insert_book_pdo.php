@@ -46,7 +46,7 @@
     $result = $con->prepare($query);
     
     echo "<div style='width:80%;margin: auto;font-weight:700;background: #010101'>";
-      $result = execute($query, $params) or die("Query failed: ".pg_last_error());
+      $result -> execute($params) or die("Query failed.");
     echo "</div";
     $book = $result ->fetchAll();
     if (sizeof($book )>0){
@@ -92,7 +92,7 @@
     // echo "Copies Available: $copies_avail<br>";
     // echo "In stock: $in_stock";
 
-    pg_close($con);
+    $con = null;
     ?>
   </body>
 </html>
