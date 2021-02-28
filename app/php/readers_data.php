@@ -10,7 +10,7 @@
 <?php
     
     foreach ($reader as $r){
-        echo '<a  href="readerbookloan?r_id='.$r['reader_id'].'&full_name='.urlencode($r['surname'].' '.$r['firstname']).'"><div class="reader-wrap" data-id="'.$r['reader_id'].'">';
+        echo '<a  href="readerbookloan?id='.$r['reader_id'].'&full_name='.urlencode($r['surname'].' '.$r['firstname']).'"><div class="reader-wrap" data-id="'.$r['reader_id'].'">';
         
         echo '  <div class="reader-fullname">'.$r['surname'].' '.$r['firstname'].'</div>';
         echo '  <div class="reader-address">'.$r['address'].'<br>'.$r['postal_code'].' '.$r['city'].'</div>';

@@ -19,15 +19,15 @@
     $isbn10 = $_POST['isbn10'];
     $title = $_POST['title'];          
     $publisher_id = $_POST['publisher_id'];   
-    $year = $_POST['year'];           
-    $pages = $_POST['pages'];          
-    $back_page = $_POST['back_page'];      
-    $category_id = $_POST['category_id'];    
+    $year = intval($_POST['year']);           
+    $pages = intval($_POST['pages']);          
+    $back_page = trim($_POST['back_page']);      
+    $category_id = intval($_POST['category_id']);    
     $translated = $_POST['translated'];     
-    $translator_id = $_POST['translator_id'];  
+    $translator_id = intval($_POST['translator_id']);  
     $eidos_grafis_id = $_POST['eidos_grafis_id'];
-    $copies_standard = $_POST['copies_standard'];
-    $copies_avail = $_POST['copies_avail'];   
+    $copies_standard = intval($_POST['copies_standard']);
+    $copies_avail = intval($_POST['copies_avail']);   
     $in_stock = $_POST['in_stock'];
 
     if (strlen($isbn) == 0 and strlen($isbn10) == 0){
@@ -35,17 +35,20 @@
         die();
     }
 
-    $con = con_homelibrary();
+    $con = pdo_homelibrary();
     
     // TODO: Complete the query.
-    $result = pg_prepare($con, "newbook", 'INSERT INTO tbl_books (isbn, isbn10, title, publisher_id, year, pages, back_page, category_id, translated, translator_id, eidos_grafis_id, copies_standard, copies_avail, in_stock) 
-    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING *');
+    $query = "INSERT INTO tbl_books (isbn, isbn10, title, publisher_id, year, pages, back_page, category_id, translated, translator_id, eidos_grafis_id, copies_standard, copies_avail, in_stock) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING *";
     
     $params = array( $isbn, $isbn10, $title, $publisher_id, $year, $pages, $back_page, $category_id, $translated, $translator_id, $eidos_grafis_id, $copies_standard, $copies_avail, $in_stock);
+
+    $result = $con->prepare($query);
+    
     echo "<div style='width:80%;margin: auto;font-weight:700;background: #010101'>";
-      $result = pg_execute($con, "newbook", $params) or die("Query failed: ".pg_last_error());
+      $result -> execute($params) or die("Query failed.");
     echo "</div";
-    $book = pg_fetch_all($result);
+    $book = $result ->fetchAll();
     if (sizeof($book )>0){
       echo "<div style='width:80%;margin: auto;background: #010101'>";
         echo "<h2>Επιτυχής Εισαγωγή Βιβλίου με ISBN: $isbn.</h2>";
@@ -64,7 +67,12 @@
               echo "<li>Style: ".$b['eidos_grafis_id']."</li>";
               echo "<li>Copies: ".$b['copies_standard']."</li>";
               echo "<li>Copies Available: ".$b['copies_avail']."</li>";
-              echo "<li>In stock: ".$b['in_stock']."</li>";
+              if ($b['in_stock']== TRUE){
+                $stock = "Yes";
+              }else{
+                $stock = "No";
+              }
+              echo "<li>In stock: ".$stock."</li>";
             }
            echo '</ol>';
       echo "</div>";
@@ -89,7 +97,7 @@
     // echo "Copies Available: $copies_avail<br>";
     // echo "In stock: $in_stock";
 
-    pg_close($con);
+    $con = null;
     ?>
   </body>
 </html>

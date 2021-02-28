@@ -20,5 +20,5 @@ if ($q !== "") {
     }
   }
 }
-
+echo $hint === "" ? "no suggestion" : $hint;
 ?>
