@@ -22,7 +22,7 @@
     ?>
     <div class="container">
     <h2>Ενημέρωση Βιβλίου</h2>
-      <form name="newbook" action="/"  onsubmit="return val_form()" method="post">
+      <form name="updatebook" action="/"  method="post">
         <div class="row">
           <div class="col-25"><label for="isbn">ISBN:</label></div>
           <div class="col-60"><input type="text" id="isbn" name="isbn" placeholder="Καταχωρείστε το ISBN  του βιβλίου." onkeyup="showHint(this.value)">

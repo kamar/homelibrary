@@ -3,5 +3,5 @@ node_modules
 dist
 *.bak
 gulpfile_local.js
-
+isbn_check.txt
 
