@@ -22,6 +22,7 @@ function pdo_homelibrary(){
 
     try {
         $con = new PDO("pgsql:dbname=$db;host=$host;user=$user;password=$pass");
+        $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     catch (PDOException $e) {
         echo 'Connection failed: ' . $e->getMessage();
