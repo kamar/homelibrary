@@ -42,9 +42,9 @@ input[type=submit] {
   }
   
   /* Floating column for inputs: 75% width */
-  .col-60 {
+  .col-45 {
     float: left;
-    width: 60%;
+    width: 45%;
     margin-top: 6px;
 
     p , span{
@@ -52,9 +52,9 @@ input[type=submit] {
     }
   }
 
-  .col-15{
+  .col-30{
     float:left;
-    width: 15%;
+    width: 30%;
     margin-top: 6px;
     padding-top: 10px;
   }
@@ -67,7 +67,7 @@ input[type=submit] {
   }
   
   @media screen and (max-width: 600px) {
-    .col-15, .col-25, .col-60, input[type=submit] {
+    .col-30, .col-25, .col-45, input[type=submit] {
       width: 80%;
       margin-top: 0;
     }
@@ -76,4 +76,5 @@ input[type=submit] {
   .form_error{
     display: inline;
     color: red;
+    font-size: 0.8rem;
   }
