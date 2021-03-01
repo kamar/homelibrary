@@ -8,15 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
-    <!-- (A) CSS & JS -->
     <link href="/dist/style.css" rel="stylesheet">
   </head>
   <body>
       <nav>
-          <div class="header__menu has-fade" id="mymenu">
-              <a href="/"  id="home" class="btn"><i class="glyphicon glyphicon-user"></i>Home</a>
+          <div class="header__menu" id="mymenu">
+              <a href="/"  id="home" class="btn">Home</a>
               <a href="/pages/readers" id="readers" class="btn"">Readers</a>
               <a href="/pages/newbook" id="newbook" class="btn">Εισαγωγή Βιβλίου</a>
               <a href="/pages/updatebook">Update Book</a>

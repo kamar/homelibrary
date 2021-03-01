@@ -15,6 +15,7 @@ function con_homelibrary(){
 
 
 function pdo_homelibrary(){
+
     $host = "localhost"; 
     $user = "km"; 
     $pass = "j@nuoyla_01"; 

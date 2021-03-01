@@ -54,7 +54,7 @@ function browsersyncReload(cb){
 function watchTask(){
   watch('*.html', browsersyncReload);
   watch('*.php', browsersyncReload);
-  watch(['app/scss/**/*.scss', 'app/js/**/*.js', 'app/php/**/*.php', 'pages/**/*.php'], series(scssTask, jsTask, copyPHP, copyToServer, browsersyncReload));
+  watch(['app/scss/**/*.scss', 'app/js/**/*.js', 'app/php/**/*.php', 'pages/**/*.php', 'ics/**/*.php'], series(scssTask, jsTask, copyPHP, copyToServer, browsersyncReload));
 }
 
 // Default Gulp task
