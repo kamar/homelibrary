@@ -25,6 +25,7 @@
     $category_id = intval($_POST['category_id']);    
     $translated = $_POST['translated'];     
     $translator_id = intval($_POST['translator_id']);  
+    $author_id = intval($_POST['author_id']);
     $eidos_grafis_id = $_POST['eidos_grafis_id'];
     $copies_standard = intval($_POST['copies_standard']);
     $copies_avail = intval($_POST['copies_avail']);   
@@ -41,29 +42,39 @@
     $query = "INSERT INTO tbl_books (isbn, isbn10, title, publisher_id, year, pages, back_page, category_id, translated, translator_id, eidos_grafis_id, copies_standard, copies_avail, in_stock) 
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING *";
     
+    // $query2 = "INSERT INTO books_authors (isbn, author_id)";
+    
     $params = array( $isbn, $isbn10, $title, $publisher_id, $year, $pages, $back_page, $category_id, $translated, $translator_id, $eidos_grafis_id, $copies_standard, $copies_avail, $in_stock);
 
+    // $params2 = array($isbn, $author_id);
+
     $result = $con->prepare($query);
-    
+    // $result2 = $con->prepare($query2);
+
     echo "<div style='width:80%;margin: auto;font-weight:700;background: #010101'>";
       $result -> execute($params) or die("Query failed.");
+      // $result2 -> execute($params2);
     echo "</div";
     $book = $result ->fetchAll();
+    // $author = $result2->fetchAll();
     if (sizeof($book )>0){
-      echo "<div style='width:80%;margin: auto;background: #010101'>";
-        echo "<h2>Επιτυχής Εισαγωγή Βιβλίου με ISBN: $isbn.</h2>";
-          echo '<ol>';
-            foreach ($book as $b){
+      foreach ($book as $b){
+          echo "<div style='width:80%;margin: auto;background: #010101'>";
+          echo "<h2>Επιτυχής Εισαγωγή Βιβλίου με ISBN: ".$b['isbn']."</h2>";
+            echo '<ol>';
               echo "<li>ISBN: ".$b['isbn']."</li>";
               echo "<li>ISBN10: ".$b['isbn10']."</li>";
               echo "<li>Title: ".$b['title']."</li>";
-              echo "<li>Publisher: ".$b['publisher_id']."</li>";
+              echo "<li>Publisher: <a href='/dist/php/pub?p=".$b['publisher_id']."'>".$b['publisher_id']."</a></li>";
               echo "<li>Year: ".$b['year']."</li>";
               echo "<li>Pages: ".$b['pages']."</li>";
               echo "<li>Back Page: ".$b['back_page']."</li>";
               echo "<li>Category: ".$b['category_id']."</li>";
               echo "<li>Translated: ".$b['translated']."</li>";
               echo "<li>Translator: ".$b['translator_id']."</li>";
+              // if (sizeof($author)>0){
+                echo "<li>Author: <a href='dist/php/author.php?a=".$author_id."'></a></li>";
+              // }
               echo "<li>Style: ".$b['eidos_grafis_id']."</li>";
               echo "<li>Copies: ".$b['copies_standard']."</li>";
               echo "<li>Copies Available: ".$b['copies_avail']."</li>";
