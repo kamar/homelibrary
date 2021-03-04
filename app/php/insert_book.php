@@ -13,12 +13,13 @@
   </head>
   <body>
     <?php
-    include 'connect.php';
+    // include 'connect.php';
+    include 'utilities.php';
 
     $isbn = $_POST['isbn'];           
     $isbn10 = $_POST['isbn10'];
     $title = $_POST['title'];          
-    $publisher_id = $_POST['publisher_id'];   
+    $publisher_id = intval($_POST['publisher_id']); 
     $year = intval($_POST['year']);           
     $pages = intval($_POST['pages']);          
     $back_page = trim($_POST['back_page']);      
@@ -26,7 +27,7 @@
     $translated = $_POST['translated'];     
     $translator_id = intval($_POST['translator_id']);  
     $author_id = intval($_POST['author_id']);
-    $eidos_grafis_id = $_POST['eidos_grafis_id'];
+    $eidos_grafis_id = intval($_POST['eidos_grafis_id']);
     $copies_standard = intval($_POST['copies_standard']);
     $copies_avail = intval($_POST['copies_avail']);   
     $in_stock = $_POST['in_stock'];
@@ -38,44 +39,55 @@
 
     $con = pdo_homelibrary();
     
-    // TODO: Complete the query.
     $query = "INSERT INTO tbl_books (isbn, isbn10, title, publisher_id, year, pages, back_page, category_id, translated, translator_id, eidos_grafis_id, copies_standard, copies_avail, in_stock) 
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING *";
     
-    // $query2 = "INSERT INTO books_authors (isbn, author_id)";
+    $query2 = "INSERT INTO books_authors (isbn, author_id) VALUES (?, ?)";
     
     $params = array( $isbn, $isbn10, $title, $publisher_id, $year, $pages, $back_page, $category_id, $translated, $translator_id, $eidos_grafis_id, $copies_standard, $copies_avail, $in_stock);
 
-    // $params2 = array($isbn, $author_id);
-
+    
     $result = $con->prepare($query);
-    // $result2 = $con->prepare($query2);
-
-    echo "<div style='width:80%;margin: auto;font-weight:700;background: #010101'>";
-      $result -> execute($params) or die("Query failed.");
-      // $result2 -> execute($params2);
+    
+    echo "<div style='width:80%;margin: auto;font-weight:700;background: #010101;line-height:1.8'>";
+    $result -> execute($params) or die("Query failed.");
     echo "</div";
     $book = $result ->fetchAll();
     // $author = $result2->fetchAll();
     if (sizeof($book )>0){
       foreach ($book as $b){
-          echo "<div style='width:80%;margin: auto;background: #010101'>";
+        $params2 = array($b['isbn'], $author_id);
+        $result2 = $con->prepare($query2);
+        $count_author = $result2 -> execute($params2);
+          echo "<div style='width:80%;margin: auto;background: #010101;line-height:1.8'>";
           echo "<h2>Επιτυχής Εισαγωγή Βιβλίου με ISBN: ".$b['isbn']."</h2>";
+          if ($count_author > 0){
+            echo "<h3>Επιτυχής Εισαγωγή συγγραφέα: ".$author_id."</h3>";
+          }
             echo '<ol>';
               echo "<li>ISBN: ".$b['isbn']."</li>";
               echo "<li>ISBN10: ".$b['isbn10']."</li>";
               echo "<li>Title: ".$b['title']."</li>";
-              echo "<li>Publisher: <a href='/dist/php/pub?p=".$b['publisher_id']."'>".$b['publisher_id']."</a></li>";
+              echo "<li>Publisher: ";
+              echo get_publisher($b['publisher_id']);
+              echo "</li>";
               echo "<li>Year: ".$b['year']."</li>";
               echo "<li>Pages: ".$b['pages']."</li>";
               echo "<li>Back Page: ".$b['back_page']."</li>";
-              echo "<li>Category: ".$b['category_id']."</li>";
+              echo "<li>Category: ";
+              echo get_category($b['category_id']);
+              echo "</li>";
               echo "<li>Translated: ".$b['translated']."</li>";
-              echo "<li>Translator: ".$b['translator_id']."</li>";
-              // if (sizeof($author)>0){
-                echo "<li>Author: <a href='dist/php/author.php?a=".$author_id."'></a></li>";
-              // }
-              echo "<li>Style: ".$b['eidos_grafis_id']."</li>";
+              echo "<li>Translator: ";
+              echo get_translator($b['translator_id']);
+              echo "</li>";
+              // echo "<li>Author: <a href='/dist/php/author?a=".$author_id."'>".$author_id."</a></li>";
+              echo "<li>Author: ";
+              echo get_author($author_id);       
+              echo "</li>";
+              echo "<li>Style: ";
+              echo get_grafi($b['eidos_grafis_id']);
+              echo "</li>";
               echo "<li>Copies: ".$b['copies_standard']."</li>";
               echo "<li>Copies Available: ".$b['copies_avail']."</li>";
               if ($b['in_stock']== TRUE){
