@@ -49,7 +49,7 @@
     
     $result = $con->prepare($query);
     
-    echo "<div style='width:80%;margin: auto;font-weight:700;background: #010101;line-height:1.8'>";
+    echo "<div>";
     $result -> execute($params) or die("Query failed.");
     echo "</div";
     $book = $result ->fetchAll();
@@ -59,52 +59,59 @@
         $params2 = array($b['isbn'], $author_id);
         $result2 = $con->prepare($query2);
         $count_author = $result2 -> execute($params2);
-          echo "<div style='width:80%;margin: auto;background: #010101;line-height:1.8'>";
-          echo "<h2>Επιτυχής Εισαγωγή Βιβλίου με ISBN: ".$b['isbn']."</h2>";
-          if ($count_author > 0){
-            echo "<h3>Επιτυχής Εισαγωγή συγγραφέα: ".$author_id."</h3>";
-          }
-            echo '<ol>';
-              echo "<li>ISBN: ".$b['isbn']."</li>";
-              echo "<li>ISBN10: ".$b['isbn10']."</li>";
-              echo "<li>Title: ".$b['title']."</li>";
-              echo "<li>Publisher: ";
-              echo get_publisher($b['publisher_id']);
-              echo "</li>";
-              echo "<li>Year: ".$b['year']."</li>";
-              echo "<li>Pages: ".$b['pages']."</li>";
-              echo "<li>Back Page: ".$b['back_page']."</li>";
-              echo "<li>Category: ";
-              echo get_category($b['category_id']);
-              echo "</li>";
-              echo "<li>Translated: ".$b['translated']."</li>";
-              echo "<li>Translator: ";
-              echo get_translator($b['translator_id']);
-              echo "</li>";
-              // echo "<li>Author: <a href='/dist/php/author?a=".$author_id."'>".$author_id."</a></li>";
-              echo "<li>Author: ";
-              echo get_author($author_id);       
-              echo "</li>";
-              echo "<li>Style: ";
-              echo get_grafi($b['eidos_grafis_id']);
-              echo "</li>";
-              echo "<li>Copies: ".$b['copies_standard']."</li>";
-              echo "<li>Copies Available: ".$b['copies_avail']."</li>";
-              if ($b['in_stock']== TRUE){
-                $stock = "Yes";
-              }else{
-                $stock = "No";
+          echo '<div class="modal" id="myModal">';
+            echo"<div class='modal-content'>";
+              echo "<div class='modal-header>";
+              echo '<span class="close">&times;</span>';
+              echo "<h2>Επιτυχής Εισαγωγή Βιβλίου με ISBN: ".$b['isbn']."</h2>";
+              if ($count_author > 0){
+                echo "<h3>Επιτυχής Εισαγωγή συγγραφέα: ".$author_id."</h3>";
               }
-              echo "<li>In stock: ".$stock."</li>";
-            }
-           echo '</ol>';
-      echo "</div>";
-      }
-      else{
-        echo "<div style='width:80%;margin: auto;background: #010101'>";
-          echo "<h2>Δεν έγινε εισαγωγή του βιβλίου.</h2>";
-        echo "</div>";
-      }
+              echo "</div>";
+              echo '<div class="modal-body">';
+                echo '<ol>';
+                  echo "<li>ISBN: ".$b['isbn']."</li>";
+                  echo "<li>ISBN10: ".$b['isbn10']."</li>";
+                  echo "<li>Title: ".$b['title']."</li>";
+                  echo "<li>Publisher: ";
+                  echo get_publisher($b['publisher_id']);
+                  echo "</li>";
+                  echo "<li>Year: ".$b['year']."</li>";
+                  echo "<li>Pages: ".$b['pages']."</li>";
+                  echo "<li>Back Page: ".$b['back_page']."</li>";
+                  echo "<li>Category: ";
+                  echo get_category($b['category_id']);
+                  echo "</li>";
+                  echo "<li>Translated: ".$b['translated']."</li>";
+                  echo "<li>Translator: ";
+                  echo get_translator($b['translator_id']);
+                  echo "</li>";
+                  // echo "<li>Author: <a href='/dist/php/author?a=".$author_id."'>".$author_id."</a></li>";
+                  echo "<li>Author: ";
+                  echo get_author($author_id);
+                  echo "</li>";
+                  echo "<li>Style: ";
+                  echo get_grafi($b['eidos_grafis_id']);
+                  echo "</li>";
+                  echo "<li>Copies: ".$b['copies_standard']."</li>";
+                  echo "<li>Copies Available: ".$b['copies_avail']."</li>";
+                  if ($b['in_stock']== TRUE){
+                    $stock = "Yes";
+                  }else{
+                    $stock = "No";
+                  }
+                  echo "<li>In stock: ".$stock."</li>";
+                }
+               echo '</ol>';
+                    echo "</div>";
+                  }
+                  else{
+                    echo "<div class='modal-body'>";
+                    echo "<h2>Δεν έγινε εισαγωγή του βιβλίου.</h2>";
+                    echo "</div>";
+                  }
+              echo "</div>";
+          echo '</div>';
     // echo "ISBN: ".$isbn."<br>";
     // echo "ISBN10: $isbn10<br>";
     // echo "Title: $title<br>";
@@ -122,5 +129,34 @@
 
     $con = null;
     ?>
+    <script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+// btn.onclick = function() {
+//   modal.style.display = "block";
+// }
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+  window.location.replace("homelibrary.me");
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    window.location.replace("homelibrary.me");
+  }
+}
+</script>
   </body>
 </html>
