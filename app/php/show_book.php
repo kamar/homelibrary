@@ -46,11 +46,11 @@
       $result_author->execute() or die("Query failed.");
       $author = $result_author->fetchAll();
       
-      if (count($author)==1){
+      if (sizeof($author)==1){
         $bauthor = $author[0]['author'];
       }
-      elseif (count($author)>1){
-        for ($i=0;$i<count($author);$i++){
+      elseif (sizeof($author)>1){
+        for ($i=0;$i<sizeof($author);$i++){
           $bauthor .= $author[$i]['author'].=", ";
         }
         $bauthor = rtrim($bauthor, ", ");
