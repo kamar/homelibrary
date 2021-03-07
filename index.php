@@ -16,7 +16,7 @@
     <?php require_once('ics/footer.php'); ?>
     <script src="/dist/menu.js"></script>
     <script src="/dist/functions.js"></script>
-    <script src="dist/script.js"></script>
+    <!-- <script src="dist/script.js"></script> -->
     <script src="dist/scroll.js"></script>
   </body>
 </html>

@@ -7,6 +7,11 @@
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     align-items: stretch;
     grid-gap: 10px;
+
+    & a{
+      text-decoration: none;
+    }
+
   }
   
   
@@ -15,7 +20,9 @@
     padding: 15px;
     border: 1px solid #808080;
     border-radius: 8px;
+    
   }
+  
   
   #our-books .book-wrap:hover {
     cursor: pointer;

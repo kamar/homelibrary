@@ -5,9 +5,6 @@
     $con = pdo_homelibrary();
     $reader = $con->query($query) or die("Cannot execute query: $query\n");
     $con = null;
-?>    
-
-<?php
     
     foreach ($reader as $r){
         echo '<a  href="readerbookloan?id='.$r['reader_id'].'&full_name='.urlencode($r['surname'].' '.$r['firstname']).'"><div class="reader-wrap" data-id="'.$r['reader_id'].'">';
