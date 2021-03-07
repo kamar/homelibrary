@@ -25,7 +25,7 @@
       ELSE 'Not Translated'
     END,
     concat_ws(' ', t.firstname, t.surname) AS translator, eg.description as writing_type, b.copies_standard, b.copies_avail, b.in_stock
-    FROM tbl_books AS b, tbl_publisher AS p, tbl_eidos_grafis AS eg, tbl_categories AS c, tbl_author AS au, tbl_translator AS t
+    FROM tbl_books AS b, tbl_publisher AS p, tbl_eidos_grafis AS eg, tbl_categories AS c, tbl_translator AS t
     WHERE b.publisher_id = p.publisher_id AND b.category_id = c.category_id AND b.eidos_grafis_id = eg.eidos_grafis_id AND b.translator_id = t.translator_id 
     AND b.isbn = :isbn";
     
