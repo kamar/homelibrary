@@ -1,7 +1,6 @@
 <?php
 require 'scripts.php';
 
-
 function get_publisher($id){
     $publishers = get_publishers();
     foreach ($publishers as $p){

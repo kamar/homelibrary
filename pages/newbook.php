@@ -142,8 +142,8 @@
           <div class="col-45"><input type="checkbox" name="in_stock" id="in_stock" value="t"></div>
         </div>
         <div class="row">
-      <input type="submit" value="Καταχώρηση">
-    </div>
+          <input type="submit" value="Καταχώρηση">
+        </div>
       </form>
     </div>
     <!-- <?php require_once '../ics/footer.php'; ?> -->
