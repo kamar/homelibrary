@@ -84,7 +84,8 @@
           echo "<p>".$errors[2]."</p>";
         echo "</div>";
         echo "</div>";
-        echo "</div>";      }
+        echo "</div>";      
+      }
     
     $con = null;
     ?>

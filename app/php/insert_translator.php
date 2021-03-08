@@ -19,8 +19,14 @@
 
 
     $firstname = $_POST['firstname'];           
+    // if (strlen($firstname)==0){
+    //   $firstname = NULL;
+    // }
     $surname = $_POST['surname'];
-    
+    // if (strlen($surname)==0){
+    //   $surname = NULL;
+    // }
+
     $con = pdo_homelibrary();
     
     $query = "INSERT INTO tbl_translator (firstname, surname) 
@@ -30,6 +36,7 @@
     $result->bindParam(':firstname', $firstname, PDO::PARAM_STR);
     $result->bindParam(':surname', $surname, PDO::PARAM_STR);
 
+    try{
     $result -> execute() or die("Query failed.");
 
     $translator = $result ->fetchAll();
@@ -46,13 +53,25 @@
               echo "</div>";
                   }
                 } 
-    else{
-      echo "<div class='modal-body'>";
-        echo "<h2>Δεν έγινε εισαγωγή του μεταφραστή.</h2>";
-      echo "</div>";
+                echo "</div>";
+              echo "</div>";
     }
-            echo "</div>";
-          echo "</div>";
+                catch (PDOException  $e)
+                {
+                  echo '<div id="myModal" class="modal">';
+                  echo"<div class='modal-content'>";
+                  echo "<div class='modal-header'>";
+                            echo '<span class="close">&times;</span>';
+                            echo "<h2>Δεν έγινε εισαγωγή του μεταφραστή.</h2>";
+                  echo "</div>";
+                  echo "<div class='modal-body'>";
+                    echo "<p>Exception: ".$e->getMessage()."</p>";
+                    $errors = $result->errorInfo();
+                      echo "<p>".$errors[2]."</p>";
+                  echo "</div>";
+                  echo "</div>";
+                  echo "</div>";
+                }
     
     $con = null;
     ?>
