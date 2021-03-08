@@ -69,16 +69,21 @@
               echo '<div class="modal-body">';
                 echo '<ol>';
                   // TODO: What if 2 or more authors?
-                  echo "<li>Author: ".$bauthor."</li>";
+                  if (sizeof($author)==1){
+                    echo "<li>Author: ".$bauthor."</li>";
+                  }
+                  elseif (sizeof($author)>1){
+                    echo "<li>Authors: ".$bauthor."</li>";
+                  }
                   echo "<li>ISBN: ".$b['isbn']."</li>";
                   echo "<li>ISBN10: ".$b['isbn10']."</li>";
                   echo "<li>Publisher: ".$b['name']."</li>";
                   echo "<li>Year: ".$b['year']."</li>";
                   echo "<li>Pages: ".$b['pages']."</li>";
                   echo "<li>Category: ".$b['category']."</li>";
-                  if (!$b['translated']){
-                    echo "<li>Translated: ".$b['case']."</li>";
-                  }
+                  // if (!$b['translated']){
+                  //   echo "<li>Translated: ".$b['case']."</li>";
+                  // }
                   if ($b['translated']){
                     echo "<li>Translator: ".$b['translator']."</li>";
                   }
