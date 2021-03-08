@@ -6,8 +6,8 @@
       $book = $con -> query($query) or die("Cannot execute query: $query\n");
       
       foreach ($book as $p) {
-        echo '<a class="" href="/dist/php/show_book?isbn='.urlencode($p['isbn']).'">';
-        echo '<div class="book-wrap tooltip" data-id="'.$p['isbn'].'">';
+        echo '<a class="book-wrap" href="/dist/php/show_book?isbn='.urlencode($p['isbn']).'">';
+        echo '<div data-id="'.$p['isbn'].'">';
         // echo '<span class="tooltiptext">Κάντε κλικ για λεπτομέρειες.</span>';
         echo '  <div class="book-title">'.$p['title'].'</div>';
         echo '  <div class="book-isbn">'.$p['isbn'].'</div>';
