@@ -80,8 +80,8 @@
         echo "</div>";
         echo "<div class='modal-body'>";
           echo "<p>Exception: ".$e->getMessage()."</p>";
-          $errors = $result->errorInfo();
-          echo "<p>".$errors[2]."</p>";
+          // $errors = $result->errorInfo();
+          // echo "<p>".$errors[2]."</p>";
         echo "</div>";
         echo "</div>";
         echo "</div>";      

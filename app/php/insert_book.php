@@ -52,8 +52,8 @@
     
     $params = array( $isbn, $isbn10, $title, $publisher_id, $year, $pages, $back_page, $category_id, $translated, $translator_id, $eidos_grafis_id, $copies_standard, $copies_avail, $in_stock);
 
-    
-    $result = $con->prepare($query);
+    try{
+      $result = $con->prepare($query);
     
     // echo "<div>";
       $result -> execute($params) or die("Query failed.");
@@ -111,13 +111,28 @@
                 echo '</ol>';
               echo "</div>";
                   }
-                  else{
-                    echo "<div class='modal-body'>";
+                  echo "</div>";
+                echo "</div>";
+                }
+              catch (PDOException $e)
+                  {
+                    echo '<div id="myModal" class="modal">';
+                    echo"<div class='modal-content'>";
+                    echo "<div class='modal-header'>";
+                      echo '<span class="close">&times;</span>';
                       echo "<h2>Δεν έγινε εισαγωγή του βιβλίου.</h2>";
                     echo "</div>";
+                    echo "<div class='modal-body'>";
+                      echo "<h3>Exception:</h3>";
+                      echo "<p>".$e->getMessage()."</p>";
+                      // $errors = $result->errorInfo();
+                      // echo "<p>".$errors[0]."</p>";
+                      // echo "<p>".$errors[1]."</p>";
+                      // echo "<p>".$errors[2]."</p>";
+                    echo "</div>";
+                    echo "</div>";
+                    echo "</div>";
                   }
-            echo "</div>";
-          echo "</div>";
     
     $con = null;
     ?>
