@@ -79,7 +79,8 @@
           echo "<h2>Δεν έγινε εισαγωγή του συγγραφέα.</h2>";
         echo "</div>";
         echo "<div class='modal-body'>";
-          echo "<p>Exception: ".$e->getMessage()."</p>";
+          echo "<h3>Exception: </h3>";
+          echo "<p>".$e->getMessage()."</p>";
           // $errors = $result->errorInfo();
           // echo "<p>".$errors[2]."</p>";
         echo "</div>";

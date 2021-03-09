@@ -58,6 +58,7 @@
     }
                 catch (PDOException  $e)
                 {
+                  
                   echo '<div id="myModal" class="modal">';
                   echo"<div class='modal-content'>";
                   echo "<div class='modal-header'>";
@@ -65,9 +66,14 @@
                             echo "<h2>Δεν έγινε εισαγωγή του μεταφραστή.</h2>";
                   echo "</div>";
                   echo "<div class='modal-body'>";
-                    echo "<p>Exception: ".$e->getMessage()."</p>";
-                    // $errors = $result->errorInfo();
-                    //   echo "<p>".$errors[2]."</p>";
+                  
+                  echo "<h3>Exception: </h3>";
+                  $mes = $e->getMessage();
+                  // $pat = "/(SQLSTATE.*\w+) (ERROR: .*) (DETAIL: .*)/";
+                  // preg_match($pat, $mes, $errors);
+                  // for ($i=1;$i<sizeof($errors);$i++){
+                      echo "<p>".$mes."</p>";
+                  // }
                   echo "</div>";
                   echo "</div>";
                   echo "</div>";
