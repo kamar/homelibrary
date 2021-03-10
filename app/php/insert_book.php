@@ -32,7 +32,10 @@
     $category_id = intval($_POST['category_id']);    
     $translated = $_POST['translated'];     
     $translator_id = intval($_POST['translator_id']);  
-    $author_id = intval($_POST['author_id']);
+    // foreach ($_POST['author_id'] as $authid){
+      // echo $authid;
+    // }
+    $author_id = $_POST['author_id'];
     $eidos_grafis_id = intval($_POST['eidos_grafis_id']);
     $copies_standard = intval($_POST['copies_standard']);
     $copies_avail = intval($_POST['copies_avail']);   
@@ -61,19 +64,39 @@
     $book = $result ->fetchAll();
     if (sizeof($book )>0){
       foreach ($book as $b){
-        $params2 = array($b['isbn'], $author_id);
-        $result2 = $con->prepare($query2);
-        $count_author = $result2 -> execute($params2);
+        if (sizeof($author_id)==1){
+          $params2 = array($b['isbn'], $author_id);
+          $result2 = $con->prepare($query2);
+          $count_author = $result2 -> execute($params2);
+        }
+        elseif (sizeof($author_id)>1){
+
+          foreach ($author_id as $a){
+            $result2 = $con->prepare($query2);
+            $params2 = array($b['isbn'], $a);
+            $count_author += $result2 -> execute($params2);
+          }
+
+        }
           echo '<div id="myModal" class="modal">';
             echo"<div class='modal-content'>";
               echo "<div class='modal-header'>";
                 echo '<span class="close">&times;</span>';
                 echo "<h2>Επιτυχής Εισαγωγή Βιβλίου με ISBN: ".$b['isbn']."</h2>";
-                if ($count_author > 0){
-                  echo "<h3>Επιτυχής Εισαγωγή συγγραφέα: ";
-                  echo get_author($author_id);
+                if ($count_author == 1){
+                  echo "<h3>Επιτυχής Εισαγωγή Συγγραφέα: ";
+                    echo get_author($author_id[$i]);
                   echo "</h3>";
-                } 
+                }
+                elseif ($count_author > 1){
+                  for ($i=0;$i<sizeof($author_id);$i++){
+                    $authornames .=  get_author($author_id[$i]).", ";
+                  }
+                  
+                  echo "<h3>Επιτυχής Εισαγωγή Συγγραφέων: ";
+                    echo rtrim($authornames, ', ');
+                  echo "</h3>";
+                }  
               echo "</div>";
               echo '<div class="modal-body">';
                 echo '<ol>';

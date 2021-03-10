@@ -104,7 +104,7 @@
         <div class="row">
           <div class="col-25"><label for="author_id">Συγγραφέας:</label></div>
           <div class="col-45">
-            <select id="author_id" name="author_id">
+            <select id="author_id" name="author_id[]" multiple="multiple">
               <?php
                 $authors = get_authors();
                 foreach ($authors as $a){
