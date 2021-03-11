@@ -68,12 +68,13 @@
                   echo "<div class='modal-body'>";
                   
                   echo "<h3>Exception: </h3>";
-                  $mes = $e->getMessage();
-                  // $pat = "/(SQLSTATE.*\w+) (ERROR: .*) (DETAIL: .*)/";
-                  // preg_match($pat, $mes, $errors);
-                  // for ($i=1;$i<sizeof($errors);$i++){
-                      echo "<p>".$mes."</p>";
-                  // }
+                  if ($e->getCode() == '23502'){
+                    echo "<p>Το όνομα και το επίθετο δεν πρέπει να είναι κενά.</p>";     
+                  }
+                  elseif ($e->getCode() == '23514'){
+                    echo "<p>Το όνομα και το επίθετο πρέπει να συμπληρωθούν σωστά.</p>";     
+                  }
+                  echo "<p>".$e->getMessage()."</p>";
                   echo "</div>";
                   echo "</div>";
                   echo "</div>";

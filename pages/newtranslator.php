@@ -1,7 +1,7 @@
     <?php
     session_start();
     require_once('../ics/head.php');
-    include '../dist/php/scripts.php';
+    include '../dist/scripts.php';
     /*
       firstname
       surname

@@ -35,8 +35,8 @@
     VALUES (:firstname, :surname, :email, :site, :bio) RETURNING *";
     
     $result = $con->prepare($query);
-    $result->bindParam(':firstname', $firstname, PDO::PARAM_STR);
-    $result->bindParam(':surname', $surname, PDO::PARAM_STR);
+    $result->bindParam(':firstname', trim($firstname), PDO::PARAM_STR);
+    $result->bindParam(':surname', trim($surname), PDO::PARAM_STR);
     $result->bindParam(':email', $email, PDO::PARAM_STR);
     $result->bindParam(':site', $site, PDO::PARAM_STR);
     $result->bindParam(':bio', $bio, PDO::PARAM_STR);
@@ -80,6 +80,12 @@
         echo "</div>";
         echo "<div class='modal-body'>";
           echo "<h3>Exception: </h3>";
+          if ($e->getCode() == '23502'){
+            echo "<p>Το όνομα και το επίθετο δεν πρέπει να είναι κενά.</p>";     
+          }
+          elseif ($e->getCode() == '23514'){
+            echo "<p>Το όνομα και το επίθετο πρέπει να συμπληρωθούν σωστά.</p>";     
+          }
           echo "<p>".$e->getMessage()."</p>";
           // $errors = $result->errorInfo();
           // echo "<p>".$errors[2]."</p>";

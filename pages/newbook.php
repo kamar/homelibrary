@@ -24,7 +24,7 @@
     ?>
     <div class="container">
     <h2>Εισαγωγή Βιβλίου</h2>
-      <form name="newbook" action="/dist/php/insert_book"  onsubmit="return val_form()" method="post">
+      <form name="newbook" action="/dist/insert_book"  onsubmit="return val_form()" method="post">
         <div class="row">
           <div class="col-25"><label for="isbn">ISBN:</label></div>
           <div class="col-45"><input type="text" id="isbn" name="isbn" placeholder="Καταχωρείστε το ISBN  του βιβλίου."></div>
