@@ -137,7 +137,7 @@
                   echo "</div>";
                 echo "</div>";
                 }
-              catch (PDOException $e)
+              catch (PDOException)
                   {
                     echo '<div id="myModal" class="modal">';
                     echo"<div class='modal-content'>";
@@ -147,10 +147,15 @@
                     echo "</div>";
                     echo "<div class='modal-body'>";
                       echo "<h3>Exception:</h3>";
-                      echo "<p>".$e->getMessage()."</p>";
-                      // $errors = $result->errorInfo();
+                      // echo "<p>".$e->getMessage()."</p>";
+                      // echo "<p>".$result->errorInfo()[0]."</p>";
+                      $errors = $result->errorInfo();
+                      if ($errors[0] == '23514'){
+                        echo "<p>Ο ISBN πρέπει να είναι της μορφής 000-000-000-000-0 και το μήκος του να είναι 17 χαρακτήρες.</p>";
+                        echo "<p>Αντίστοιχα ο ISBN10 πρέπει της μορφής 000-000-000-0 με μήκος 13 χαρακτήρες.</p>";
+                      }
                       // echo "<p>".$errors[0]."</p>";
-                      // echo "<p>".$errors[1]."</p>";
+                      echo "<p>".$errors[2]."</p>";
                       // echo "<p>".$errors[2]."</p>";
                     echo "</div>";
                     echo "</div>";
