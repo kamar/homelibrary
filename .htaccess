@@ -1,5 +1,9 @@
 RewriteEngine on
 
+ErrorDocument 400 /errors/bad
+ErrorDocument 404 /errors/bad
+ErrorDocument 500 /errors/bad
+
 # Rewrite /foo/bar to /foo/bar.php
 RewriteRule ^([^.?]+)$ %{REQUEST_URI}.php [L]
 

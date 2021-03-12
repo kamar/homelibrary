@@ -43,3 +43,23 @@ p{
     font-weight: 400;
     color: wheat;
 }
+
+.error{
+    width: 70%;
+    margin:auto;
+    background-color: rgba($color: #fff, $alpha: .2);
+    h1, h2{
+        font-weight: 700;
+        color:red
+    }
+
+    p, a {
+        padding: 1rem;
+        margin: 1.5rem;
+        font-size: 1.2rem;
+        color: #fff
+    }
+    a{
+        text-decoration: none;
+    }
+}

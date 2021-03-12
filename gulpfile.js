@@ -29,7 +29,7 @@ function jsTask(){
 
 //Copy files to Server
 function copyToServer(){
-  return src(['dist/*.*', 'dist/php/*.php', 'images/*.*', 'ics/*.php', 'pages/*.*', './index.php'], {"base": "."})
+  return src(['dist/*.*', 'dist/php/*.php', 'images/*.*', 'ics/*.php', 'pages/*.*',  'errors/*.php','./index.php'], {"base": "."})
   .pipe(dest('/opt/lampp/docs/homelibrary'));
   // '/var/www/homelibrary'
 }
@@ -54,7 +54,7 @@ function browsersyncReload(cb){
 function watchTask(){
   watch('*.html', browsersyncReload);
   watch('*.php', browsersyncReload);
-  watch(['app/scss/**/*.scss', 'app/js/**/*.js', 'app/php/**/*.php', 'pages/**/*.php', 'ics/**/*.php'], series(scssTask, jsTask, copyPHP, copyToServer, browsersyncReload));
+  watch(['app/scss/**/*.scss', 'app/js/**/*.js', 'app/php/**/*.php', 'errors/*.php', 'pages/**/*.php', 'ics/**/*.php'], series(scssTask, jsTask, copyPHP, copyToServer, browsersyncReload));
 }
 
 // Default Gulp task
