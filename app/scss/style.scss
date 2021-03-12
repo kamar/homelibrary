@@ -47,19 +47,29 @@ p{
 .error{
     width: 70%;
     margin:auto;
-    background-color: rgba($color: #fff, $alpha: .2);
+    background-color: rgba($color: #fff, $alpha: .4);
     h1, h2{
+        padding-left: 0.8rem;
         font-weight: 700;
-        color:red
+        color:red;
     }
 
     p, a {
         padding: 1rem;
         margin: 1.5rem;
         font-size: 1.2rem;
-        color: #fff
+        color: #fff;
     }
+    
     a{
         text-decoration: none;
+    
+        &:hover{
+        cursor: pointer;
+        background-color: rgba($color: #fff, $alpha: .8);
+        border-radius: 20px;;
+        color: red;
+        font-size: 1.4rem;
+        }
     }
 }
