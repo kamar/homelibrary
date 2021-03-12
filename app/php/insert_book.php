@@ -65,7 +65,7 @@
     if (sizeof($book )>0){
       foreach ($book as $b){
         if (sizeof($author_id)==1){
-          $params2 = array($b['isbn'], $author_id);
+          $params2 = array($b['isbn'], $author_id[0]);
           $result2 = $con->prepare($query2);
           $count_author = $result2 -> execute($params2);
         }
@@ -85,7 +85,7 @@
                 echo "<h2>Επιτυχής Εισαγωγή Βιβλίου με ISBN: ".$b['isbn']."</h2>";
                 if ($count_author == 1){
                   echo "<h3>Επιτυχής Εισαγωγή Συγγραφέα: ";
-                    echo get_author($author_id[$i]);
+                    echo get_author($author_id[0]);
                   echo "</h3>";
                 }
                 elseif ($count_author > 1){
