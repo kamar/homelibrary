@@ -48,6 +48,13 @@
                   <a href="/pages/readers" id="readers" class="btn"">Readers</a>
                 </div>
               </div>
+              <div class="search-container">
+                <form action="">
+                  <input type="search" name="mysearchsearch" id="mysearch" placeholder="Search...">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                `</form>
+              </div>
+          <!-- <input type="search" name="mysearchsearch" id="mysearch" placeholder="Search..."> -->
         </nav>
         
     <!-- Κουμπί για να ανεβαίνω στην κορυφή. -->
