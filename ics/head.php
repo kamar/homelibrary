@@ -45,12 +45,12 @@
                   <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                  <a href="/pages/readers" id="readers" class="btn"">Readers</a>
+                  <a href="/pages/readers" id="readers" class="btn">Readers</a>
                 </div>
               </div>
               <div class="search-container">
-                <form action="">
-                  <input type="search" name="mysearchsearch" id="mysearch" placeholder="Search...">
+                <form action="/dist/php/search" method="post">
+                  <input type="search" name="mysearch" id="mySearch" placeholder="Search...">
                   <button type="submit"><i class="fa fa-search"></i></button>
                 `</form>
               </div>
