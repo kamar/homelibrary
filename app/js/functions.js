@@ -41,6 +41,10 @@ function toggle_inputs(status=true){
     }
 }
 
+function goBack() {
+    window.history.back();
+  }
+
 function showHint(str) {
     if (str.length == 0) {
       document.getElementById("txtHint").innerHTML = "";
@@ -51,12 +55,36 @@ function showHint(str) {
         if (this.readyState == 4 && this.status == 200) {
           document.getElementById("txtHint").innerHTML = this.responseText;
         }
-      };
+      }
       xmlhttp.open("GET", "/dist/php/hints?q=" + str, true);
       xmlhttp.send();
     }
   }
-// function active_mnu(){
+
+function hideBooks(){
+    document.getElementById('txtHint').innerHTML= "";
+    document.getElementById('hidebooks').style.display = 'none';
+    document.getElementById('authors_books').style.display = 'inline';
+}
+
+function showBooks(str){
+    document.getElementById('authors_books').style.display = 'none';
+    document.getElementById('hidebooks').style.display = 'inline';
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+      } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("txtHint").innerHTML = this.responseText;
+          }
+        }
+        xmlhttp.open("GET","/dist/php/authorsbooks?q="+str,true);
+        xmlhttp.send();
+      }
+    }
+  // function active_mnu(){
 //     // var path = window.location.pathname;
 //     // var page = path.split("/").pop();
 

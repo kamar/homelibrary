@@ -16,16 +16,22 @@
             //  TODO: Formatting and php code in database. Button for writer's books.
             echo '<div class="authordetail">';
             echo '    <div class="btnbooksauthor">';
-            
+            echo '        <button id="hidebooks" onclick="hideBooks()">Απόκρυψη Βιβλίων</button>';
+            echo '        <button id="authors_books" onclick="showBooks('.$au['author_id'].')">Βιβλία του Συγγραφέα</button>';
+            echo '        <button class="btnclose" onclick="goBack()">Κλείσιμο</button>';
             echo '    </div>';
             echo '    <div id="fullname">Fullname: '.$au['firstname'].' '.$au['surname'].'</div>';
             echo '    <div>Email: '.$au['email'].'</div>';
-            echo '    <div>Internet: '.$au['site'].'</div>';
+            echo '    <div>Internet: <a target="_blank" href="'.$au['site'].'">'.$au['site'].'</a></div>';
             echo '    <div>Bio: '.$au['bio'].'</div>';
+            echo '<div id="txtHint"></div>';
             echo '</div>';
         }
-    } 
+    }
+
     $con = null;
 ?>
+
+<script src="/dist/functions.js"></script>
 </body>
 </html>
