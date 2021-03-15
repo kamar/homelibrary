@@ -29,6 +29,7 @@
                   <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
+                  <a href="/pages/showauthors">Συγγραφείς</a>
                   <a href="/pages/newauthor">Εισαγωγή Συγγραφέα</a>
                 </div>
               </div>
