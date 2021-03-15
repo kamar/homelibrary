@@ -8,7 +8,9 @@
     $result = $con->prepare($query);
     $result->bindParam(':aid', $authorid, PDO::PARAM_INT);
 
-    $author = $result->execute();
+    $result->execute();
+    $author = $result->fetchAll();
+    
     if (sizeof($author)== 1){
         foreach ($author as $au){
             //  TODO: Formatting and php code in database. Button for writer's books.
@@ -17,9 +19,9 @@
             
             echo '    </div>';
             echo '    <div id="fullname">Fullname: '.$au['firstname'].' '.$au['surname'].'</div>';
-            echo '    <div>Email: '.'</div>';
-            echo '    <div>Internet: '.'</div>';
-            echo '    <div>Bio: '.'</div>';
+            echo '    <div>Email: '.$au['email'].'</div>';
+            echo '    <div>Internet: '.$au['site'].'</div>';
+            echo '    <div>Bio: '.$au['bio'].'</div>';
             echo '</div>';
         }
     } 

@@ -24,7 +24,7 @@ try{
         foreach ($founds as $found){
             // echo '<div data-id="'.$found['isbn'].'">';
             echo '<a class="book-wrap" href="/dist/php/show_book?isbn='.urlencode($found['isbn']).'">';
-            echo '  <div class="book-title">'.$found['isbn']."\t".$found['title'].'</div>';
+            echo '  <div class="book-title">'.$found['isbn']."    ".$found['title'].'</div>';
             // echo '  <div class="book-title">'.$found['title'].'</div>';
             echo '</a>';
         }
