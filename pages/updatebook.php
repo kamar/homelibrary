@@ -124,7 +124,7 @@
                 }
               ?>
             </select>
-            <div class="col-30" id="spanSelectedItems" style="font-size: 11px;color: red;"></div>
+            <div class="col-30"><span id="spanSelectedItems"></span></div>
           </div>
         </div>
         <div class="row">

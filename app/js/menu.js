@@ -8,7 +8,7 @@ function testme() {
 }
 
 var btns = '';
-btns = document.getElementById("mymenu").getElementsByClassName("btn");
+btns = document.getElementsByClassName("btn");
 // Get all buttons with class="btn" inside the container
 
 // Loop through the buttons and add the active class to the current/clicked button

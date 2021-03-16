@@ -168,12 +168,12 @@ function getDetail(str) {
               document.getElementById('pages').value = myObj[5];
               document.getElementById('back_page').value = myObj[6];
               document.getElementById('category_id').value = myObj[7];
-              document.getElementById('translated').value = myObj[8];
+              document.getElementById('translated').checked = myObj[8];
               document.getElementById('translator_id').value = myObj[9];
               document.getElementById('eidos_grafis_id').value = myObj[10];
               document.getElementById('copies_standard').value = myObj[11];
               document.getElementById('copies_avail').value = myObj[12];
-              document.getElementById('in_stock').value = myObj[13];
+              document.getElementById('in_stock').checked = myObj[13];
 
               // Multiple authors.
               var au = myObj[14].split(", ");

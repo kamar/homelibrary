@@ -37,6 +37,6 @@
     $mya = rtrim($a, ", ");
     
 
-    $myJSON = json_encode(array("$myisbn", "$myisbn10", "$mytitle", "$mypublisher", "$myyear", "$mypages", "$myback_page", "$mycategory_id", "$mytranslated", "$mytranslator_id", "$myeidos_grafis_id", "$mycopies_standard", "$mycopies_avail", "$myin_stock", "$mya")); 
+    $myJSON = json_encode(array("$myisbn", "$myisbn10", "$mytitle", "$mypublisher", "$myyear", "$mypages", "$myback_page", "$mycategory_id", $mytranslated, "$mytranslator_id", "$myeidos_grafis_id", "$mycopies_standard", "$mycopies_avail", $myin_stock, "$mya")); 
     echo $myJSON; 
 ?>
