@@ -4,7 +4,7 @@
     $hint = "<h2>Βιβλία</h2>";
 
     require 'connect.php';
-    $query = " SELECT isbn, title FROM tbl_books WHERE translator_id = :publisherid ORDER BY isbn";
+    $query = " SELECT isbn, title FROM tbl_books WHERE publisher_id = :publisherid ORDER BY isbn";
     $con = pdo_homelibrary();
     
     $result = $con->prepare($query);
