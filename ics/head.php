@@ -38,7 +38,17 @@
                   <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
+                  <a href="/pages/showtranslators">Μεταφραστές</a>
                   <a href="/pages/newtranslator">Εισαγωγή Μεταφραστή</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Εκδότες
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="/pages/showpublishers">Εκδότες</a>
+                  <a href="#">Εισαγωγή Εκδότη</a>
                 </div>
               </div>
               <div class="dropdown">

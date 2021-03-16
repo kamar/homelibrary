@@ -64,7 +64,7 @@ function showHint(str) {
 function hideBooks(){
     document.getElementById('txtHint').innerHTML= "";
     document.getElementById('hidebooks').style.display = 'none';
-    document.getElementById('authors_books').style.display = 'inline';
+    document.getElementById('translator_books').style.display = 'inline';
 }
 
 function showBooks(str){
@@ -84,6 +84,55 @@ function showBooks(str){
         xmlhttp.send();
       }
     }
+
+  function hideTrBooks(){
+    document.getElementById('txtHint').innerHTML= "";
+    document.getElementById('hidebooks').style.display = 'none';
+    document.getElementById('translator_books').style.display = 'inline';
+}
+
+function showTrBooks(str){
+  document.getElementById('translator_books').style.display = 'none';
+  document.getElementById('hidebooks').style.display = 'inline';
+  if (str == "") {
+      document.getElementById("txtHint").innerHTML = "";
+      return;
+    } else {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("txtHint").innerHTML = this.responseText;
+        }
+      }
+      xmlhttp.open("GET","/dist/php/translatorsbooks?q="+str,true);
+      xmlhttp.send();
+    }
+  }
+    
+  function hidePBooks(){
+    document.getElementById('txtHint').innerHTML= "";
+    document.getElementById('hidebooks').style.display = 'none';
+    document.getElementById('publisher_books').style.display = 'inline';
+}
+
+function showPBooks(str){
+  document.getElementById('publisher_books').style.display = 'none';
+  document.getElementById('hidebooks').style.display = 'inline';
+  if (str == "") {
+      document.getElementById("txtHint").innerHTML = "";
+      return;
+    } else {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("txtHint").innerHTML = this.responseText;
+        }
+      }
+      xmlhttp.open("GET","/dist/php/publishersbooks?q="+str,true);
+      xmlhttp.send();
+    }
+  }
+
   // function active_mnu(){
 //     // var path = window.location.pathname;
 //     // var page = path.split("/").pop();
