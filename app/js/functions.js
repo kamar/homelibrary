@@ -133,6 +133,68 @@ function showPBooks(str){
     }
   }
 
+
+function getDetail(str) { 
+  if (str.length == 0) { 
+      document.getElementById("isbn").value = ""; 
+      document.getElementById("title").value = ""; 
+      return; 
+  } 
+  else { 
+      
+      // Creates a new XMLHttpRequest object 
+      var xmlhttp = new XMLHttpRequest(); 
+      xmlhttp.onreadystatechange = function () { 
+
+          // Defines a function to be called when 
+          // the readyState property changes 
+          if (this.readyState == 4 &&  
+                  this.status == 200) { 
+                
+              // Typical action to be performed 
+              // when the document is ready 
+              var myObj = JSON.parse(this.responseText); 
+
+              // Returns the response data as a 
+              // string and store this array in 
+              // a variable assign the value  
+              // received to first name input field 
+                
+              document.getElementById("isbn").value = myObj[0]; 
+              document.getElementById('isbn10').value = myObj[1];
+              document.getElementById("title").value = myObj[2]; 
+              document.getElementById('publisher_id').value = myObj[3];
+              document.getElementById('year').value = myObj[4];
+              document.getElementById('pages').value = myObj[5];
+              document.getElementById('back_page').value = myObj[6];
+              document.getElementById('category_id').value = myObj[7];
+              document.getElementById('translated').value = myObj[8];
+              document.getElementById('translator_id').value = myObj[9];
+              document.getElementById('eidos_grafis_id').value = myObj[10];
+              document.getElementById('copies_standard').value = myObj[11];
+              document.getElementById('copies_avail').value = myObj[12];
+              document.getElementById('in_stock').value = myObj[13];
+
+              // Multiple authors.
+              var au = myObj[14].split(", ");
+              var element = document.getElementById('author_id');
+              for (var i = 0; i < element.options.length;i++){
+                element.options[i].selected = au.indexOf(element.options[i].value)>=0;
+              } 
+
+              var selectedItems = Array.from(element.selectedOptions).map(option => option.text);
+              spanSelectedItems.innerHTML = selectedItems;
+          } 
+      }; 
+
+        // xhttp.open("GET", "filename", true); 
+        xmlhttp.open("GET", "/dist/php/getBook?isbn=" + str, true); 
+          
+        // Sends the request to the server 
+        xmlhttp.send(); 
+    } 
+} 
+
   // function active_mnu(){
 //     // var path = window.location.pathname;
 //     // var page = path.split("/").pop();

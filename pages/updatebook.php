@@ -22,12 +22,26 @@
     ?>
     <div class="container">
     <h2>Ενημέρωση Βιβλίου</h2>
+    <form method="post">
+    <div class="row">
+          <div class="col-25"><label for="isbn">ISBN:</label></div>
+          <div class="col-45">
+            <select index="0" name="sisbn" onchange="getDetail(this.value)">
+              <?php
+                $isbns = get_isbns();
+                echo '<option value="">Διαλέξτε ISBN</option>';
+                for ($i=0;$i<sizeof($isbns);$i++){
+                  echo '<option value="'.$isbns[$i].'">'.$isbns[$i].'</option>';
+                }
+              ?>
+            </select>
+          </div>
+        </div>
+    </form>
       <form name="updatebook" action="/"  method="post">
         <div class="row">
           <div class="col-25"><label for="isbn">ISBN:</label></div>
-          <div class="col-45"><input type="text" id="isbn" name="isbn" placeholder="Καταχωρείστε το ISBN  του βιβλίου." onkeyup="showHint(this.value)">
-          <p>Suggestions: <span id="txtHint"></span></p></div>
-          <!-- <div class="col-30"><span class="form_error">* <?php $isbn_error; ?></span></div> -->
+          <div class="col-45"><input type="text" id="isbn" name="isbn" placeholder="Καταχωρείστε το ISBN  του βιβλίου."></div>
         </div>
         <div class="row">
           <div class="col-25"><label for="isbn10">ISBN 10:</label></div>
@@ -36,7 +50,6 @@
         <div class="row">
           <div class="col-25"><label for="title">Τίτλος:</label></div>
           <div class="col-45"><input type="text" id="title" name="title"></div>
-          <!-- <div class="col-30"><span class="form_error">* <?php $title_error; ?></span></div> -->
         </div>
         <div class="row">
           <div class="col-25"><label for="publisher_id">Εκδότης:</label></div>
@@ -103,7 +116,7 @@
         <div class="row">
           <div class="col-25"><label for="author_id">Συγγραφέας:</label></div>
           <div class="col-45">
-            <select id="author_id" name="author_id">
+            <select id="author_id"  name="author_id[]" multiple="multiple">
               <?php
                 $authors = get_authors();
                 foreach ($authors as $a){
@@ -111,6 +124,7 @@
                 }
               ?>
             </select>
+            <div class="col-30" id="spanSelectedItems" style="font-size: 11px;color: red;"></div>
           </div>
         </div>
         <div class="row">
