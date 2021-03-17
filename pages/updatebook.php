@@ -38,10 +38,10 @@
           </div>
         </div>
     </form>
-      <form name="updatebook" action="/"  method="post">
+      <form name="updatebook" action="/dist/php/update_book"  method="post">
         <div class="row">
           <div class="col-25"><label for="isbn">ISBN:</label></div>
-          <div class="col-45"><input type="text" id="isbn" name="isbn" placeholder="Καταχωρείστε το ISBN  του βιβλίου."></div>
+          <div class="col-45"><input type="text" id="isbn" name="isbn" readonly></div>
         </div>
         <div class="row">
           <div class="col-25"><label for="isbn10">ISBN 10:</label></div>
@@ -106,7 +106,6 @@
           $translators = get_translators();
           foreach ($translators as $t){
             echo '<option value="'.$t['translator_id'].'">'.$t['fullname'].'</option>';
-            
           }
           ?>
         </select>
@@ -124,8 +123,8 @@
                 }
               ?>
             </select>
-            <div class="col-30"><span id="spanSelectedItems"></span></div>
           </div>
+            <div class="col-30"><span id="spanselectedItems"></span></div>
         </div>
         <div class="row">
           <div class="col-25"><label for="eidos_grafis_id">Είδος Γραφής:</label></div>

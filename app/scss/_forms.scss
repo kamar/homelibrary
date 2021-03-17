@@ -42,7 +42,7 @@ input[type=submit] {
     margin-top: 6px;
   }
   
-  /* Floating column for inputs: 75% width */
+  /* Floating column for inputs: 45% width */
   .col-45 {
     float: left;
     width: 45%;
@@ -60,6 +60,10 @@ input[type=submit] {
     // padding-top: 10px;
 
     p , span{
+      margin: 6px;
+      padding-top: 6px;
+      padding-left: 6px;
+      font-size: 12px;
       color: #000000;
       }
     

@@ -135,9 +135,26 @@ function showPBooks(str){
 
 
 function getDetail(str) { 
+  var element = document.getElementById('author_id');
   if (str.length == 0) { 
       document.getElementById("isbn").value = ""; 
-      document.getElementById("title").value = ""; 
+      document.getElementById("isbn10").value = "";
+      document.getElementById("title").value = "";
+      document.getElementById('publisher_id').value = 1;
+      document.getElementById('year').value = "";
+      document.getElementById('pages').value = "";
+      document.getElementById('back_page').value = "";
+      document.getElementById('category_id').value = 1;
+      document.getElementById('translated').checked = "";
+      document.getElementById('translator_id').value = 0;
+      document.getElementById('eidos_grafis_id').value = 1;
+      document.getElementById('copies_standard').value = "";
+      document.getElementById('copies_avail').value = "";
+      document.getElementById('in_stock').checked = "";
+      for (var i = 0; i < element.length; i++){
+        element.options[i].selected = false;
+      }
+      document.getElementById('spanselectedItems').innerText = "";
       return; 
   } 
   else { 
@@ -177,13 +194,12 @@ function getDetail(str) {
 
               // Multiple authors.
               var au = myObj[14].split(", ");
-              var element = document.getElementById('author_id');
               for (var i = 0; i < element.options.length;i++){
                 element.options[i].selected = au.indexOf(element.options[i].value)>=0;
               } 
 
               var selectedItems = Array.from(element.selectedOptions).map(option => option.text);
-              spanSelectedItems.innerHTML = selectedItems;
+              spanselectedItems.innerText = selectedItems.join(', ');
           } 
       }; 
 

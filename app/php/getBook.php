@@ -1,7 +1,7 @@
 <?php
     require 'connect.php';
     $myISBN = $_REQUEST['isbn'];
-    // $myISBN = "978-3-8174-1862-6";
+    // $myISBN = "978-3-8174-1862-6";  // Only for debugging.
     $con = pdo_homelibrary();
     $query = "SELECT * FROM tbl_books WHERE isbn = :isbn";
     $result = $con->prepare($query);
@@ -37,6 +37,6 @@
     $mya = rtrim($a, ", ");
     
 
-    $myJSON = json_encode(array("$myisbn", "$myisbn10", "$mytitle", "$mypublisher", "$myyear", "$mypages", "$myback_page", "$mycategory_id", $mytranslated, "$mytranslator_id", "$myeidos_grafis_id", "$mycopies_standard", "$mycopies_avail", $myin_stock, "$mya")); 
+    $myJSON = json_encode(array("$myisbn", "$myisbn10", "$mytitle", $mypublisher, $myyear, $mypages, "$myback_page", "$mycategory_id", $mytranslated, "$mytranslator_id", "$myeidos_grafis_id", "$mycopies_standard", "$mycopies_avail", $myin_stock, "$mya")); 
     echo $myJSON; 
 ?>
