@@ -1,7 +1,8 @@
     <?php
     session_start();
-    require_once('../ics/head.php');
-    include '../dist/php/scripts.php';
+    $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+    require_once($DOCUMENT_ROOT.'/ics/head.php');
+    include $DOCUMENT_ROOT.'/dist/php/scripts.php';
     /*
       isbn           *
       isbn10         

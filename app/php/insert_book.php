@@ -16,7 +16,7 @@
     <!-- <button id="myBtn">Open Modal</button> -->
     <?php
     // include 'connect.php';
-    include 'utilities.php';
+    require 'utilities.php';
 
     $isbn = $_POST['isbn'];           
     if (strlen($_POST['isbn10']) > 0){

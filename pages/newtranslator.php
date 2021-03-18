@@ -19,7 +19,7 @@
         </div>
         <div class="row">
           <div class="col-25"><label for="surname">Επώνυμο Μεταφραστή:</label></div>
-          <div class="col-45"><input type="text" id="surname" name="surname"></div>
+          <div class="col-45"><input type="text" id="surname" name="surname"  placeholder="Καταχωρείστε το επώνυμο του μεταφραστή."></div>
         </div>
         <div class="row">
           <input type="submit" value="Καταχώρηση">

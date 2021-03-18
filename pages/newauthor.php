@@ -14,7 +14,7 @@
     ?>
     <div class="container">
     <h2>Εισαγωγή Συγγραφέα</h2>
-      <form name="newbook" action="/dist/php/insert_author"  onsubmit="return val_form()" method="post">
+      <form name="newauthor" action="/dist/php/insert_author"  onsubmit="return val_form()" method="post">
         <div class="row">
           <div class="col-25"><label for="firstname">Όνομα Συγγραφέα:</label></div>
           <div class="col-45"><input type="text" id="firstname" name="firstname" placeholder="Καταχωρείστε το όνομα του συγγραφέα."></div>

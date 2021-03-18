@@ -1,6 +1,7 @@
 <?php
     session_start();
-    require_once '../../ics/head.php';
+    $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+    require_once $DOCUMENT_ROOT.'/ics/head.php';
     require 'connect.php';
     $translatorid = intval($_GET['trid']);
     $query ="SELECT * FROM tbl_translator WHERE translator_id = :trid";

@@ -1,6 +1,8 @@
 <?php
     session_start();
-    require_once '../../ics/head.php';
+    $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+
+    require_once $DOCUMENT_ROOT.'/ics/head.php';
     require 'connect.php';
     $authorid = intval($_GET['aid']);
     $query ="SELECT * FROM tbl_author WHERE author_id = :aid";

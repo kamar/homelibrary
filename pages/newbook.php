@@ -33,11 +33,11 @@
         </div>
         <div class="row">
           <div class="col-25"><label for="isbn10">ISBN 10:</label></div>
-          <div class="col-45"><input type="text" id="isbn10" name="isbn10"></div>
+          <div class="col-45"><input type="text" id="isbn10" name="isbn10" placeholder="Καταχωρείστε το ISBN10 αν υπάρχει."></div>
         </div>
         <div class="row">
           <div class="col-25"><label for="title">Τίτλος:</label></div>
-          <div class="col-45"><input type="text" id="title" name="title"></div>
+          <div class="col-45"><input type="text" id="title" name="title" placeholder="Καταχωρείστε τον τίτλο του βιβλίου."></div>
           <div class="col-30"><span class="form_error">* <?php $title_error; ?></span></div>
         </div>
         <div class="row">
@@ -56,11 +56,11 @@
         </div>
         <div class="row">
           <div class="col-25"><label for="year">Έτος έκδοσης:</label></div>
-          <div class="col-45"><input type="text" id="year" name="year"></div>
+          <div class="col-45"><input type="text" id="year" name="year" placeholder="Καταχωρείστε το έτος έκδοσης του βιβλίου."></div>
         </div>
         <div class="row">
           <div class="col-25"><label for="pages">Σελίδες:</label></div>
-          <div class="col-45"><input type="text" id="pages" name="pages"></div>
+          <div class="col-45"><input type="text" id="pages" name="pages" placeholder="Καταχωρείστε τον αριθμό των σελίδων του βιβλίου."></div>
         </div>
         <div class="row">
           <div class="col-25"><label for="back_page">Οπισθόφυλλο - Περιγραφή:</label></div>
@@ -132,7 +132,7 @@
         </div>
         <div class="row">
           <div class="col-25"><label for="copies_standard">Αντίτυπα:</label></div>
-          <div class="col-45"><input type="text" name="copies_standard" id="copies_standard" onchange="fill_available()"></div>
+          <div class="col-45"><input type="text" name="copies_standard" id="copies_standard" onchange="fill_available()" placeholder="Καταχωρείστε τα αντίτυπα που υπάρχουν"></div>
         </div>
         <div class="row">
           <div class="col-25"><label for="copies_avail">Διαθέσιμα αντίγραφα:</label></div>

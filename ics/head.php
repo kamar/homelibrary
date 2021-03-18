@@ -48,7 +48,7 @@
                 </button>
                 <div class="dropdown-content">
                   <a href="/pages/showpublishers">Εκδότες</a>
-                  <a href="#">Εισαγωγή Εκδότη</a>
+                  <a href="/pages/newpublisher">Εισαγωγή Εκδότη</a>
                 </div>
               </div>
               <div class="dropdown">
@@ -57,6 +57,7 @@
                 </button>
                 <div class="dropdown-content">
                   <a href="/pages/readers" id="readers" class="btn">Readers</a>
+                  <a href="/pages/newreader" id="newreader" class="btn">Εισγωγή Αναγνώστη</a>
                 </div>
               </div>
               <div class="search-container">

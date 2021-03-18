@@ -15,7 +15,7 @@
 
     <!-- <button id="myBtn">Open Modal</button> -->
     <?php
-    include 'connect.php';
+    require 'connect.php';
 
 
     $firstname = $_POST['firstname'];           
