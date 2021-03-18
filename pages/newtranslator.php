@@ -1,7 +1,8 @@
     <?php
     session_start();
-    require_once('../ics/head.php');
-    include '../dist/scripts.php';
+    $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+    require_once($DOCUMENT_ROOT.'/ics/head.php');
+    include $DOCUMENT_ROOT.'/dist/scripts.php';
     /*
       firstname
       surname

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php 
   session_start();
-  require_once '../ics/head.php';
+  $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+  require_once $DOCUMENT_ROOT.'/ics/head.php';
 ?>
     <!-- (B) READERS LIST -->
     <!-- <div id="reader-bookloan"> -->
