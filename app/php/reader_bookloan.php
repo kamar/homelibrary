@@ -47,7 +47,7 @@ Column
         // echo $rbl['isbn']." ".$rbl['startdate']." ".$rbl['startdate']."\n";
        echo "<tr>
             <td>".$rbl['loan_id']."</td>
-            <td>".$rbl['isbn']."</td>
+            <td><a href=\"/dist/php/show_book?isbn=".urlencode($rbl['isbn'])."\">".$rbl['isbn']."</a></td>
             <td>".$rbl['title']."</td>
             <td>".$rbl['startdate']."</td>
             <td>".$rbl['enddate']."</td>
