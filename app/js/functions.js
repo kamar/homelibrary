@@ -1,4 +1,4 @@
-const input_copies_standard = document.getElementById('copies_standard')
+// const input_copies_standard = document.getElementById('copies_standard')
 
 function fill_available(){
     var $copies_standard = document.getElementById('copies_standard').value

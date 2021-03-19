@@ -8,8 +8,9 @@ function testme() {
 }
 
 var btns = [];
+var btnContainer = document.getElementById("testmenu");
 // Get all buttons with class="btn" inside the container
-btns = document.getElementsByClassName("btn");
+btns = btnContainer.getElementsByClassName("btn");
 
 // Loop through the buttons and add the active class to the current/clicked button
 for (var i = 0; i < btns.length; i++) {
