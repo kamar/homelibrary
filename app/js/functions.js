@@ -133,6 +133,29 @@ function showPBooks(str){
     }
   }
 
+//   function hideRBooks(){
+//     document.getElementById('txtSuggestions').innerHTML= "";
+//     document.getElementById('hidebooks').style.display = 'none';
+//     document.getElementById('publisher_books').style.display = 'inline';
+// }
+
+function showRBooks(str){
+  // document.getElementById('publisher_books').style.display = 'none';
+  // document.getElementById('hidebooks').style.display = 'inline';
+  if (str == "") {
+      document.getElementById("txtSuggestions").innerHTML = "";
+      return;
+    } else {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("txtSuggestions").innerHTML = this.responseText;
+        }
+      }
+      xmlhttp.open("GET","/dist/php/readersuggest?q="+str,true);
+      xmlhttp.send();
+    }
+  }
 
 function getDetail(str) { 
   var element = document.getElementById('author_id');
