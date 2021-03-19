@@ -8,11 +8,14 @@
     <!-- <div id="reader-bookloan"> -->
       <?php
       // TODO: Add reader's Fullname as caption.
-      $_SESSION['reader_id'] = $_GET['id'];
+      $_SESSION['reader_id'] = $_GET['rid'];
       // $_SESSION['full_name'] = $_GET['full_name'];
       echo "<h1>Αναγνώστης: ".$_GET['full_name']."</h1>";
-      require "../dist/php/reader_bookloan.php";
-      require_once '../ics/footer.php';
+      echo '<div class="btnsdiv">';
+        echo '<button class="btnclose" onclick="goBack()">Κλείσιμο</button>';
+      echo '</div>';
+        require $DOCUMENT_ROOT."/dist/php/reader_bookloan.php";
+      require_once $DOCUMENT_ROOT.'/ics/footer.php';
       ?>
       <!-- Script section -->
       <script src="/dist/menu.js"></script>
