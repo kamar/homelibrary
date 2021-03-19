@@ -47,4 +47,19 @@ function get_author($id){
     }
 }
 
+function set_string($txt, $count=20){
+
+    if (strlen($txt)==0){
+        return false;
+    }
+
+     $array = explode(' ', $txt, $count);
+     $res = "";
+     for ($i=0;$i<sizeof($array)-1; $i++){
+         $res .= $array[$i]." ";
+     }
+     return trim($res, " ");
+ }
+
+
 ?>

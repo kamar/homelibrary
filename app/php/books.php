@@ -1,5 +1,6 @@
 <?php
-      require "connect.php";
+      // require "connect.php";
+      require "utilities.php";
       
       $query = "SELECT isbn, title, pages, back_page FROM tbl_books ORDER BY isbn"; 
       $con = pdo_homelibrary();
@@ -12,7 +13,7 @@
         echo '  <div class="book-title">'.$p['title'].'</div>';
         echo '  <div class="book-isbn">'.$p['isbn'].'</div>';
         if (strlen($p['back_page'])> 0){
-            echo '  <div class="book-desc" id="numpages">Descr: <span>'.substr($p['back_page'], 0, 300).'...</span></div>';
+            echo '  <div class="book-desc" id="numpages">Descr: <span>'.set_string($p['back_page'], 25).'...</span></div>';
         }
         else if (strlen($p['back_page'])===0){
             echo '  <div class="book-desc" id="numpages">Descr: <span>No description.</span></div>';
@@ -22,5 +23,5 @@
         }
         
         echo '</div></a>';
-      $con = null;
+      unset($con);
       } ?>

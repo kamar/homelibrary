@@ -12,7 +12,7 @@
     <link href="/dist/style.css" rel="stylesheet">
   </head>
   <body>
-      <nav class="navbar">
+      <nav id="testmenu" class="navbar">
               <a href="/" id="home" class="btn">Home</a>
               <div class="dropdown">
                 <button class="dropbtn">Books
@@ -57,7 +57,7 @@
                 </button>
                 <div class="dropdown-content">
                   <a href="/pages/readers" id="readers" class="btn">Readers</a>
-                  <a href="/pages/newreader" id="newreader" class="btn">Εισγωγή Αναγνώστη</a>
+                  <a href="/pages/newreader" id="newreader" class="btn">Εισαγωγή Αναγνώστη</a>
                 </div>
               </div>
               <div class="search-container">
