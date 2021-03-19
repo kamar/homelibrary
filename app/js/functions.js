@@ -133,15 +133,15 @@ function showPBooks(str){
     }
   }
 
-//   function hideRBooks(){
-//     document.getElementById('txtSuggestions').innerHTML= "";
-//     document.getElementById('hidebooks').style.display = 'none';
-//     document.getElementById('publisher_books').style.display = 'inline';
-// }
+  function hideRBooks(){
+    document.getElementById('txtSuggestions').innerHTML= "";
+    document.getElementById('hidebooks').style.display = 'none';
+    document.getElementById('suggestions').style.display = 'inline';
+}
 
-function showRBooks(str){
-  // document.getElementById('publisher_books').style.display = 'none';
-  // document.getElementById('hidebooks').style.display = 'inline';
+function showRSuggestions(str){
+  document.getElementById('suggestions').style.display = 'none';
+  document.getElementById('hidebooks').style.display = 'inline';
   if (str == "") {
       document.getElementById("txtSuggestions").innerHTML = "";
       return;

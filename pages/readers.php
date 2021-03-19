@@ -6,10 +6,10 @@
     <h1>Αναγνώστες</h1>
     <div id="our-readers">
       <?php
-      require "../dist/php/readers_data.php";
+      require $DOCUMENT_ROOT."/dist/php/readers_data.php";
       ?>
     </div>
-    <?php require_once '../ics/footer.php';?>
+    <?php require_once $DOCUMENT_ROOT.'/ics/footer.php';?>
     <!-- Script section -->
     <script src="/dist/menu.js"></script>
     <script src="/dist/functions.js"></script>
