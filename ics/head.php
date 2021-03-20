@@ -61,6 +61,10 @@
                   <a href="/pages/newreader" id="newreader" class="btn">Εισαγωγή Αναγνώστη</a>
                 </div>
               </div>
+              <div class="login">
+                <a onclick="btnHideShow()" id="login" href="#">Login</a>
+                <a id="logout" href="#">Logout</a>
+              </div>
               <div class="search-container">
                 <form action="/dist/php/search" method="post">
                   <input type="search" name="mysearch" id="mySearch" placeholder="Search...">

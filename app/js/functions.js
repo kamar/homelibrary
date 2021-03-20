@@ -234,6 +234,11 @@ function getDetail(str) {
     } 
 } 
 
+function btnHideShow(){
+  document.getElementById('login').style.display = 'none';
+  document.getElementById('logout').style.display= 'inline';
+}
+
   // function active_mnu(){
 //     // var path = window.location.pathname;
 //     // var page = path.split("/").pop();
