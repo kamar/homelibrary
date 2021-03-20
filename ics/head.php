@@ -19,6 +19,7 @@
                   <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
+                <a href="/pages/showbooks" id="showbooks" class="btn">Εμφάνιση Βιβλίων</a>
                   <a href="/pages/newbook" id="newbook" class="btn">Εισαγωγή Βιβλίου</a>
                   <a href="/pages/updatebook">Update Book</a>
                   <a href="#">Delete Book</a>

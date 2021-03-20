@@ -65,7 +65,7 @@
         <div class="row">
           <div class="col-25"><label for="back_page">Οπισθόφυλλο - Περιγραφή:</label></div>
           <div class="col-45">
-            <textarea id="back_page" name="back_page" rows="8" cols="50">
+            <textarea id="back_page" name="back_page" rows="5" cols="50">
             </textarea>
           </div>
         </div>

@@ -34,7 +34,7 @@
         </div>
         <div class="row">
           <div class="col-25"><label for="bio">Βιογραφικό Συγγραφέα:</label></div>
-          <div class="col-45"><textarea  rows="8" cols="50" id="bio" name="bio" placeholder="Καταχωρείστε το βιογραφικό του συγγραφέα."></textarea></div>
+          <div class="col-45"><textarea  rows="5" cols="50" id="bio" name="bio" placeholder="Καταχωρείστε το βιογραφικό του συγγραφέα."></textarea></div>
         </div>
         <div class="row">
           <input type="submit" value="Καταχώρηση">

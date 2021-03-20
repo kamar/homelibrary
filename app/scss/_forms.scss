@@ -1,7 +1,15 @@
 /* Style inputs, select elements and textareas */
 input[type=text], input[type=email], input[type=url], select, textarea{
   width: 100%;
-  padding: 12px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+input[type=checkbox]{
+  padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -31,8 +39,8 @@ input[type=submit] {
     width: 80%;
     border-radius: 5px;
     background-color: #8a7b53;
-    padding: 20px;
-    margin: auto;
+    padding: .4rem;
+    margin: 1rem auto;
   }
   
   /* Floating column for labels: 25% width */
@@ -57,7 +65,8 @@ input[type=submit] {
     float:left;
     width: 30%;
     margin-top: 6px;
-    // padding-top: 10px;
+    // padding-top: 10px
+    // resize:vertical;
 
     p , span{
       margin: 6px;

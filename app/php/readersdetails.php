@@ -35,7 +35,7 @@
             echo '    <div class="btnbookssuggested">';
             echo '        <button id="hidebooks" onclick="hideRBooks()">Απόκρυψη Πρότασης Βιβλίων</button>';
             echo '        <button id="suggestions" onclick="showRSuggestions('.$r['reader_id'].')">Βιβλία που προτείνονται</button>';
-            echo '        <button id="loan"><a href="/pages/readerbookloan?rid='.$r['reader_id'].'&full_name='.urlencode($r['firstname'].' '.$r['surname']).'">Βιβλία που έχει διαβάσει</a></button>';
+            echo '        <a  href="/pages/readerbookloan?rid='.$r['reader_id'].'&full_name='.urlencode($r['firstname'].' '.$r['surname']).'"> Βιβλία που έχει διαβάσει</a>';
             echo '        <button class="btnclose" onclick="goBack()">Κλείσιμο</button>';
             echo '    </div>';
             echo '    <div id="fullname">Ονοματεπώνυμο: '.$r['firstname'].' '.$r['surname'].'</div>';
