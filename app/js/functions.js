@@ -234,9 +234,19 @@ function getDetail(str) {
     } 
 } 
 
-function btnHideShow(){
-  document.getElementById('login').style.display = 'none';
-  document.getElementById('logout').style.display= 'inline';
+function btnHideShow(ele){
+  var id = ele.id;
+  if (id == 'login'){
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('registerme').style.display = 'none';
+    document.getElementById('logout').style.display= 'inline';
+
+  }
+  else if (id = 'logout'){
+    document.getElementById('logout').style.display = 'none';
+    document.getElementById('login').style.display= 'inline';
+    document.getElementById('registerme').style.display= 'inline';
+  }
 }
 
   // function active_mnu(){

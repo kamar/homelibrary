@@ -62,8 +62,9 @@
                 </div>
               </div>
               <div class="login">
-                <a onclick="btnHideShow()" id="login" href="#">Login</a>
-                <a id="logout" href="#">Logout</a>
+                <a id="registerme" href="#">Register</a>
+                <a onclick="btnHideShow(this)" id="login" href="#">Login</a>
+                <a onclick="btnHideShow(this)" id="logout" href="#">Logout</a>
               </div>
               <div class="search-container">
                 <form action="/dist/php/search" method="post">
