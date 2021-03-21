@@ -1,9 +1,17 @@
 <?php
     require "connect.php";
-
-    $query = "SELECT reader_id, surname, firstname,  father_name, mother_name, address, postal_code, city FROM tbl_readers ORDER BY surname, firstname"; 
     $con = pdo_homelibrary();
-    $reader = $con->query($query) or die("Cannot execute query: $query\n");
+    if (isset($_SESSION['email'])){
+        $query = "SELECT reader_id, surname, firstname,  father_name, mother_name, address, postal_code, city FROM tbl_readers WHERE email= :email ORDER BY surname, firstname";
+        $result = $con->prepare($query);
+        $result->bindParam(':email', $_SESSION['email'], PDO::PARAM_STR);
+        $result->execute();
+        $reader = $result->fetchAll();
+    }
+    else{
+        $query = "SELECT reader_id, surname, firstname,  father_name, mother_name, address, postal_code, city FROM tbl_readers ORDER BY surname, firstname"; 
+        $reader = $con->query($query) or die("Cannot execute query: $query\n");
+    }
     $con = null;
     
     foreach ($reader as $r){

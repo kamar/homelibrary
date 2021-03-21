@@ -19,6 +19,11 @@ if(isset($_POST['email']) && isset($_POST['passwort'])) {
 	//Überprüfung des Passworts
 	if ($user !== false && password_verify($passwort, $user['passwort'])) {
 		$_SESSION['userid'] = $user['id'];
+		$_SESSION['firstname'] = $user['vorname'];
+		$_SESSION['email'] = $user['email'];
+		if ($user['admin'] == true){
+			$_SESSION['admin'] = $user['admin']; 
+		}
 
 		//Möchte der Nutzer angemeldet beleiben?
 		if(isset($_POST['angemeldet_bleiben'])) {

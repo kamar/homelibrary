@@ -31,6 +31,11 @@
           <div class="col-30"><span class="form_error"> <?php $isbn_error; ?></span></div>
         </div>
         <div class="row">
+          <div class="col-25"><label for="Email">Email:</label></div>
+          <div class="col-45"><input type="email" id="email" name="email" placeholder="Καταχωρείστε το email." required></div>
+          <div class="col-30"><span class="form_error"> <?php $isbn_error; ?></span></div>
+        </div>
+        <div class="row">
           <div class="col-25"><label for="father_name">Πατρώνυμο:</label></div>
           <div class="col-45"><input type="text" id="father_name" name="father_name" placeholder="Καταχωρείστε το πατρώνυμο."></div>
           <div class="col-30"><span class="form_error"> <?php $isbn_error; ?></span></div>

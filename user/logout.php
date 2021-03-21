@@ -2,6 +2,7 @@
 session_start();
 session_destroy();
 unset($_SESSION['userid']);
+unset($_SESSION['admin']);
 
 //Remove Cookies
 setcookie("identifier","",time()-(3600*24*365)); 

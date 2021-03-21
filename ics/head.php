@@ -28,9 +28,13 @@
                 </button>
                 <div class="dropdown-content">
                 <a href="/pages/showbooks" id="showbooks" class="btn">Εμφάνιση Βιβλίων</a>
-                  <a href="/pages/newbook" id="newbook" class="btn">Εισαγωγή Βιβλίου</a>
-                  <a href="/pages/updatebook">Update Book</a>
-                  <a href="#">Delete Book</a>
+                <?php
+                  if (isset($_SESSION['userid']) AND isset($_SESSION['admin'])){
+                    echo '<a href="/pages/newbook" id="newbook" class="btn">Εισαγωγή Βιβλίου</a>';
+                    echo '<a href="/pages/updatebook">Update Book</a>';
+                    echo '<a href="#">Delete Book</a>';
+                  }
+                ?>
                 </div>
               </div>
               <div class="dropdown">
@@ -39,7 +43,11 @@
                 </button>
                 <div class="dropdown-content">
                   <a href="/pages/showauthors">Συγγραφείς</a>
-                  <a href="/pages/newauthor">Εισαγωγή Συγγραφέα</a>
+                  <?php
+                  if (isset($_SESSION['userid']) AND isset($_SESSION['admin'])){
+                    echo '<a href="/pages/newauthor">Εισαγωγή Συγγραφέα</a>';
+                  }
+                  ?>
                 </div>
               </div>
               <div class="dropdown">
@@ -48,7 +56,11 @@
                 </button>
                 <div class="dropdown-content">
                   <a href="/pages/showtranslators">Μεταφραστές</a>
-                  <a href="/pages/newtranslator">Εισαγωγή Μεταφραστή</a>
+                  <?php
+                    if (isset($_SESSION['userid']) AND isset($_SESSION['admin'])){
+                      echo '<a href="/pages/newtranslator">Εισαγωγή Μεταφραστή</a>';
+                    }
+                  ?>
                 </div>
               </div>
               <div class="dropdown">
@@ -57,7 +69,11 @@
                 </button>
                 <div class="dropdown-content">
                   <a href="/pages/showpublishers">Εκδότες</a>
-                  <a href="/pages/newpublisher">Εισαγωγή Εκδότη</a>
+                  <?php
+                  if (isset($_SESSION['userid']) AND isset($_SESSION['admin'])){
+                    echo '<a href="/pages/newpublisher">Εισαγωγή Εκδότη</a>';
+                  }
+                  ?>
                 </div>
               </div>
               <div class="dropdown">
@@ -66,12 +82,17 @@
                 </button>
                 <div class="dropdown-content">
                   <a href="/pages/readers" id="readers" class="btn">Readers</a>
-                  <a href="/pages/newreader" id="newreader" class="btn">Εισαγωγή Αναγνώστη</a>
+                  <?php
+                  if (isset($_SESSION['userid']) AND isset($_SESSION['admin'])){
+                    echo '<a href="/pages/newreader" id="newreader" class="btn">Εισαγωγή Αναγνώστη</a>';
+                  }
+                  ?>
                 </div>
               </div>
               <div class="login">
               <?php
                 if (isset($_SESSION['userid'])){
+                  echo '<a href="/pages/readers">'.htmlentities($_SESSION['firstname']).'</a>';
                   echo '<a id="logout" href="/user/logout">Logout</a>';  // onclick="btnHideShow(this)"
                 }
                 else{
