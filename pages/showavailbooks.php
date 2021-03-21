@@ -4,7 +4,8 @@
     require_once($DOCUMENT_ROOT.'/ics/head.php')
 ?>
     <!-- (B) BOOKS LIST -->
-    <h1>Βιβλία που Διαθέτει η Βιβλιοθήκη</h1>
+    <h1>Διαθέσιμα Βιβλία για Δανεισμό.</h1>
+    
     <!-- <p>Κάντε κλικ πάνω στο βιβλίο.</p> -->
     <div id="our-books">
       <?php

@@ -96,7 +96,7 @@ if($showFormular) {
 </div> 
 <div class="row">
 	<div class="col-45">
-		<input type="submit">Registrieren>
+		<input type="submit" value="Registrieren">
 	</div>
 </div>
 </form>

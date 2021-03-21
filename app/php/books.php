@@ -2,7 +2,12 @@
       // require "connect.php";
       require "utilities.php";
       
-      $query = "SELECT isbn, title, pages, back_page FROM tbl_books ORDER BY isbn"; 
+      if ($_SERVER['REQUEST_URI'] == '/pages/showavailbooks'){
+        $query = "SELECT isbn, title, pages, back_page FROM tbl_books ORDER BY isbn WHERE in_stock = true";   
+      }
+      else{
+        $query = "SELECT isbn, title, pages, back_page FROM tbl_books ORDER BY isbn"; 
+      }
       $con = pdo_homelibrary();
       $book = $con -> query($query) or die("Cannot execute query: $query\n");
       

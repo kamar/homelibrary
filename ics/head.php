@@ -28,6 +28,7 @@
                 </button>
                 <div class="dropdown-content">
                 <a href="/pages/showbooks" id="showbooks" class="btn">Εμφάνιση Βιβλίων</a>
+                <a href="/pages/showavailbooks" id="showavailbooks" class="btn">Εμφάνιση Βιβλίων για Δανεισμό</a>
                 <?php
                   if (isset($_SESSION['userid']) AND isset($_SESSION['admin'])){
                     echo '<a href="/pages/newbook" id="newbook" class="btn">Εισαγωγή Βιβλίου</a>';
