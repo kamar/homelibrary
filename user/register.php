@@ -1,11 +1,12 @@
 <?php 
 session_start();
-require_once("inc/config.inc.php");
+$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+require_once($DOCUMENT_ROOT."/dist/php/connect.php");
 require_once("inc/functions.inc.php");
-
-include("templates/header.inc.php")
+$pdo = pdo_homelibrary();
+include($DOCUMENT_ROOT."/ics/head.php");
 ?>
-<div class="container main-container registration-form">
+<div class="container">
 <h1>Registrierung</h1>
 <?php
 $showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
@@ -56,7 +57,7 @@ if(isset($_GET['register'])) {
 		$result = $statement->execute(array('email' => $email, 'passwort' => $passwort_hash, 'vorname' => $vorname, 'nachname' => $nachname));
 		
 		if($result) {		
-			echo 'Du wurdest erfolgreich registriert. <a href="login.php">Zum Login</a>';
+			echo 'Du wurdest erfolgreich registriert. <a href="login">Zum Login</a>';
 			$showFormular = false;
 		} else {
 			echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
@@ -69,31 +70,35 @@ if($showFormular) {
 
 <form action="?register=1" method="post">
 
-<div class="form-group">
-<label for="inputVorname">Vorname:</label>
-<input type="text" id="inputVorname" size="40" maxlength="250" name="vorname" class="form-control" required>
+<div class="row">
+	<div class="col-25"><label for="inputVorname">Vorname:</label></div>
+	<div class="col-45"><input type="text" id="inputVorname" size="40" maxlength="250" name="vorname" class="form-control" required></div>
 </div>
 
-<div class="form-group">
-<label for="inputNachname">Nachname:</label>
-<input type="text" id="inputNachname" size="40" maxlength="250" name="nachname" class="form-control" required>
+<div class="row">
+	<div class="col-25"><label for="inputNachname">Nachname:</label></div>
+	<div class="col-45"><input type="text" id="inputNachname" size="40" maxlength="250" name="nachname" class="form-control" required></div>
 </div>
 
-<div class="form-group">
-<label for="inputEmail">E-Mail:</label>
-<input type="email" id="inputEmail" size="40" maxlength="250" name="email" class="form-control" required>
+<div class="row">
+	<div class="col-25"><label for="inputEmail">E-Mail:</label></div>
+	<div class="col-45"><input type="email" id="inputEmail" size="40" maxlength="250" name="email" class="form-control" required></div>
 </div>
 
-<div class="form-group">
-<label for="inputPasswort">Dein Passwort:</label>
-<input type="password" id="inputPasswort" size="40"  maxlength="250" name="passwort" class="form-control" required>
+<div class="row">
+	<div class="col-25"><label for="inputPasswort">Dein Passwort:</label></div>
+	<div class="col-45"><input type="password" id="inputPasswort" size="40"  maxlength="250" name="passwort" class="form-control" required></div>
 </div> 
 
-<div class="form-group">
-<label for="inputPasswort2">Passwort wiederholen:</label>
-<input type="password" id="inputPasswort2" size="40" maxlength="250" name="passwort2" class="form-control" required>
+<div class="row">
+	<div class="col-25"><label for="inputPasswort2">Passwort wiederholen:</label></div>
+	<div class="col-45"><input type="password" id="inputPasswort2" size="40" maxlength="250" name="passwort2" class="form-control" required></div>
 </div> 
-<button type="submit" class="btn btn-lg btn-primary btn-block">Registrieren</button>
+<div class="row">
+	<div class="col-45">
+		<input type="submit">Registrieren>
+	</div>
+</div>
 </form>
  
 <?php
@@ -103,5 +108,7 @@ if($showFormular) {
 ?>
 </div>
 <?php 
-include("templates/footer.inc.php")
+include($DOCUMENT_ROOT."ics/footer.php");
 ?>
+</body>
+</html>

@@ -21,9 +21,9 @@ include($DOCUMENT_ROOT."/ics/head.php");
 Hallo <?php echo htmlentities($user['vorname']); ?>,<br>
 Herzlich Willkommen im internen Bereich!<br><br>
 
-<div class="panel panel-default">
+<div>
  
-<table class="table">
+<table id="bookloan">
 <tr>
 	<th>#</th>
 	<th>Vorname</th>
@@ -49,7 +49,7 @@ while($row = $statement->fetch()) {
 
 </div>
 <?php 
-include($DOCUMENT_ROOT."/ics/footer.inc.php");
+include($DOCUMENT_ROOT."/ics/footer.php");
 ?>
 </body>
 </html>

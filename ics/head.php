@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  // $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+  // require_once($DOCUMENT_ROOT."/dist/php/connect.php");
+  // require_once($DOCUMENT_ROOT."/user/inc/functions.inc.php");
+  // $user = 
+  // $pdo = pdo_homelibrary();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -62,9 +70,15 @@
                 </div>
               </div>
               <div class="login">
-                <a id="registerme" href="#">Register</a>
-                <a onclick="btnHideShow(this)" id="login" href="#">Login</a>
-                <a onclick="btnHideShow(this)" id="logout" href="#">Logout</a>
+              <?php
+                if (isset($_SESSION['userid'])){
+                  echo '<a id="logout" href="/user/logout">Logout</a>';  // onclick="btnHideShow(this)"
+                }
+                else{
+                  echo '<a id="registerme" href="/user/register">Register</a>';
+                  echo '<a id="login" href="/user/login">Login</a>';
+                }
+              ?>
               </div>
               <div class="search-container">
                 <form action="/dist/php/search" method="post">
