@@ -76,19 +76,19 @@
                   ?>
                 </div>
               </div>
-              <div class="dropdown">
-                <button class="dropbtn">Readers
-                  <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                  <a href="/pages/readers" id="readers" class="btn">Readers</a>
                   <?php
                   if (isset($_SESSION['userid']) AND isset($_SESSION['admin'])){
-                    echo '<a href="/pages/newreader" id="newreader" class="btn">Εισαγωγή Αναγνώστη</a>';
+                    echo '<div class="dropdown">
+                      <button class="dropbtn">Readers
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                      <div class="dropdown-content">
+                        <a href="/pages/readers" id="readers" class="btn">Readers</a>';
+                          echo '<a href="/pages/newreader" id="newreader" class="btn">Εισαγωγή Αναγνώστη</a>
+                      </div>
+                    </div>';
                   }
                   ?>
-                </div>
-              </div>
               <div class="login">
               <?php
                 if (isset($_SESSION['userid'])){

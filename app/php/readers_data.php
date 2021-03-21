@@ -1,7 +1,7 @@
 <?php
     require "connect.php";
     $con = pdo_homelibrary();
-    if (isset($_SESSION['email'])){
+    if (isset($_SESSION['email']) AND !isset($_SESSION['admin'])){
         $query = "SELECT reader_id, surname, firstname,  father_name, mother_name, address, postal_code, city FROM tbl_readers WHERE email= :email ORDER BY surname, firstname";
         $result = $con->prepare($query);
         $result->bindParam(':email', $_SESSION['email'], PDO::PARAM_STR);
