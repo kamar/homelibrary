@@ -3,7 +3,7 @@
       require "utilities.php";
       
       if ($_SERVER['REQUEST_URI'] == '/pages/showavailbooks'){
-        $query = "SELECT isbn, title, pages, back_page FROM tbl_books ORDER BY isbn WHERE in_stock = true";   
+        $query = "SELECT isbn, title, pages, back_page FROM tbl_books WHERE in_stock = true ORDER BY isbn";   
       }
       else{
         $query = "SELECT isbn, title, pages, back_page FROM tbl_books ORDER BY isbn"; 
