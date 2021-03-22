@@ -1,0 +1,61 @@
+# Greek translations for PACKAGE package.
+# Copyright (C) 2021 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Konstas  <marmako@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-22 21:53+0200\n"
+"PO-Revision-Date: 2021-03-22 21:58+0200\n"
+"Last-Translator: Konstas <marmako@gmail.com>\n"
+"Language-Team: Greek\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#. $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+#. require_once($DOCUMENT_ROOT."/dist/php/connect.php");
+#. require_once($DOCUMENT_ROOT."/user/inc/functions.inc.php");
+#. $user =
+#. $pdo = pdo_homelibrary();
+#: ics/head.php:16
+msgid "Home Library"
+msgstr "Οικιακή Βιβλιοθήκη"
+
+#: ics/head.php:27
+msgid "Home"
+msgstr "Αρχική"
+
+#: ics/head.php:33
+msgid "All Books"
+msgstr "Όλα τα Βιβλία"
+
+#: ics/head.php:34
+msgid "Availble Books"
+msgstr "Διαθέσιμα Βιβλία για Δανεισμό"
+
+#: ics/head.php:37
+msgid "Insert Book"
+msgstr "Εισαγωγή Βιβλίου"
+
+#: ics/head.php:38
+msgid "Update Book"
+msgstr "Ενημέρωση Βιβλίου"
+
+#: ics/head.php:39
+msgid "Delete Book"
+msgstr "Διαγραφή Βιβλίου"
+
+#: ics/head.php:45 ics/head.php:49
+msgid "Authors"
+msgstr "Συγγραφείς"
+
+#: ics/head.php:52
+msgid "Insert Author"
+msgstr "Εισαγωγή Συγγραφέα"

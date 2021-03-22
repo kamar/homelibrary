@@ -1,0 +1,62 @@
+# German translations for PACKAGE package.
+# Copyright (C) 2021 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Konstas  <marmako@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-22 21:53+0200\n"
+"PO-Revision-Date: 2021-03-22 22:51+0200\n"
+"Last-Translator: Konstas <marmako@gmail.com>\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#. $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+#. require_once($DOCUMENT_ROOT."/dist/php/connect.php");
+#. require_once($DOCUMENT_ROOT."/user/inc/functions.inc.php");
+#. $user =
+#. $pdo = pdo_homelibrary();
+#: ics/head.php:16
+msgid "Home Library"
+msgstr "Haus Bibliothek"
+
+#: ics/head.php:27
+msgid "Home"
+msgstr "Hause"
+
+#: ics/head.php:33
+msgid "All Books"
+msgstr "Alle Bücher"
+
+#: ics/head.php:34
+msgid "Availble Books"
+msgstr "Verfügbare Büche "
+
+#: ics/head.php:37
+msgid "Insert Book"
+msgstr "Neues Buch"
+
+#: ics/head.php:38
+#, fuzzy
+msgid "Update Book"
+msgstr "Buch Update"
+
+#: ics/head.php:39
+msgid "Delete Book"
+msgstr "Buch Streichung"
+
+#: ics/head.php:45 ics/head.php:49
+msgid "Authors"
+msgstr "Schriftteller"
+
+#: ics/head.php:52
+msgid "Insert Author"
+msgstr "Neuer Schiftteller"

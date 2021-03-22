@@ -1,5 +1,10 @@
 <?php
   session_start();
+  putenv('LC_ALL=de_DE');
+  setlocale(LC_MESSAGES, 'de_DE.UTF-8');
+  bindtextdomain("homelibrary", "locale");
+  textdomain("homelibrary");
+  bind_textdomain_codeset("homelibrary", 'UTF-8');
   // $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
   // require_once($DOCUMENT_ROOT."/dist/php/connect.php");
   // require_once($DOCUMENT_ROOT."/user/inc/functions.inc.php");
@@ -10,7 +15,7 @@
 <html>
   <head>
     <title>
-      Οικιακή Βιβλιοθήκη
+      <?php echo _("Home Library"); ?>
     </title>
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -21,58 +26,58 @@
   </head>
   <body>
       <nav id="testmenu" class="navbar">
-              <a href="/" id="home" class="btn">Home</a>
+              <a href="/" id="home" class="btn"><?php echo _('Home'); ?></a>
               <div class="dropdown">
-                <button class="dropbtn">Books
+                <button class="dropbtn"><?php echo _('Books') ?>
                   <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                <a href="/pages/showbooks" id="showbooks" class="btn">Εμφάνιση Βιβλίων</a>
-                <a href="/pages/showavailbooks" id="showavailbooks" class="btn">Εμφάνιση Βιβλίων για Δανεισμό</a>
+                <a href="/pages/showbooks" id="showbooks" class="btn"><?php echo _('All Books'); ?></a>
+                <a href="/pages/showavailbooks" id="showavailbooks" class="btn"><?php echo _('Availble Books'); ?></a>
                 <?php
                   if (isset($_SESSION['userid']) AND isset($_SESSION['admin'])){
-                    echo '<a href="/pages/newbook" id="newbook" class="btn">Εισαγωγή Βιβλίου</a>';
-                    echo '<a href="/pages/updatebook">Update Book</a>';
-                    echo '<a href="#">Delete Book</a>';
+                    echo '<a href="/pages/newbook" id="newbook" class="btn">'._('Insert Book').'</a>';
+                    echo '<a href="/pages/updatebook">'._('Update Book').'</a>';
+                    echo '<a href="#">'._('Delete Book').'</a>';
                   }
                 ?>
                 </div>
               </div>
               <div class="dropdown">
-                <button class="dropbtn">Authors
+                <button class="dropbtn"><?php echo _('Authors');?>
                   <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                  <a href="/pages/showauthors">Συγγραφείς</a>
+                  <a href="/pages/showauthors"><?php echo _('Authors'); ?></a>
                   <?php
                   if (isset($_SESSION['userid']) AND isset($_SESSION['admin'])){
-                    echo '<a href="/pages/newauthor">Εισαγωγή Συγγραφέα</a>';
+                    echo '<a href="/pages/newauthor">'._('Insert Author').'</a>';
                   }
                   ?>
                 </div>
               </div>
               <div class="dropdown">
-                <button class="dropbtn">Translators
+                <button class="dropbtn"><?php echo _('Translators'); ?>
                   <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                  <a href="/pages/showtranslators">Μεταφραστές</a>
+                  <a href="/pages/showtranslators"><?php echo _('Translators'); ?></a>
                   <?php
                     if (isset($_SESSION['userid']) AND isset($_SESSION['admin'])){
-                      echo '<a href="/pages/newtranslator">Εισαγωγή Μεταφραστή</a>';
+                      echo '<a href="/pages/newtranslator">'._('Insert Translator').'</a>';
                     }
                   ?>
                 </div>
               </div>
               <div class="dropdown">
-                <button class="dropbtn">Εκδότες
+                <button class="dropbtn"><?php echo _('Publishers'); ?>
                   <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                  <a href="/pages/showpublishers">Εκδότες</a>
+                  <a href="/pages/showpublishers"><?php echo _('Publishers'); ?></a>
                   <?php
                   if (isset($_SESSION['userid']) AND isset($_SESSION['admin'])){
-                    echo '<a href="/pages/newpublisher">Εισαγωγή Εκδότη</a>';
+                    echo '<a href="/pages/newpublisher">'._('Insert Publisher').'</a>';
                   }
                   ?>
                 </div>
@@ -80,11 +85,12 @@
                   <?php
                   if (isset($_SESSION['userid']) AND isset($_SESSION['admin'])){
                     echo '<div class="dropdown">
-                      <button class="dropbtn">Readers
+                      <button class="dropbtn">'. _('Readers').'
                         <i class="fa fa-caret-down"></i>
                       </button>
                       <div class="dropdown-content">
-                        <a href="/pages/readers" id="readers" class="btn">Readers</a>';
+                        <a href="/pages/readers" id="readers" class="btn">'. _('Readers').'</a>';
+                          echo '<a href="#" id="newreader" class="btn">Δανεισμός</a>';
                           echo '<a href="/pages/newreader" id="newreader" class="btn">Εισαγωγή Αναγνώστη</a>
                       </div>
                     </div>';

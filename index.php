@@ -1,5 +1,10 @@
 <?php 
     session_start();
+    // putenv('LC_ALL=de_DE');
+    // setlocale(LC_MESSAGES, 'de_DE.UTF-8');
+    // bindtextdomain("homelibrary", "locale");
+    // textdomain("homelibrary");
+  
     require_once('ics/head.php');
 ?>
     <!-- (B) BOOKS LIST -->

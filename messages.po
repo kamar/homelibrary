@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-22 23:33+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. bind_textdomain_codeset("homelibrary", 'UTF-8');
+#. $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+#. require_once($DOCUMENT_ROOT."/dist/php/connect.php");
+#. require_once($DOCUMENT_ROOT."/user/inc/functions.inc.php");
+#. $user =
+#. $pdo = pdo_homelibrary();
+#. $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+#. require_once($DOCUMENT_ROOT."/dist/php/connect.php");
+#. require_once($DOCUMENT_ROOT."/user/inc/functions.inc.php");
+#. $user =
+#. $pdo = pdo_homelibrary();
+#: ics/head.php:18 ics/head.php:16
+msgid "Home Library"
+msgstr ""
+
+#: ics/head.php:29 ics/head.php:27
+msgid "Home"
+msgstr ""
+
+#: ics/head.php:31
+msgid "Books"
+msgstr ""
+
+#: ics/head.php:35 ics/head.php:33
+msgid "All Books"
+msgstr ""
+
+#: ics/head.php:36 ics/head.php:34
+msgid "Availble Books"
+msgstr ""
+
+#: ics/head.php:39 ics/head.php:37
+msgid "Insert Book"
+msgstr ""
+
+#: ics/head.php:40 ics/head.php:38
+msgid "Update Book"
+msgstr ""
+
+#: ics/head.php:41 ics/head.php:39
+msgid "Delete Book"
+msgstr ""
+
+#: ics/head.php:47 ics/head.php:51 ics/head.php:45 ics/head.php:49
+msgid "Authors"
+msgstr ""
+
+#: ics/head.php:54 ics/head.php:52
+msgid "Insert Author"
+msgstr ""
+
+#: ics/head.php:60 ics/head.php:64
+msgid "Translators"
+msgstr ""
+
+#: ics/head.php:67
+msgid "Insert Translator"
+msgstr ""
+
+#: ics/head.php:73 ics/head.php:77
+msgid "Publishers"
+msgstr ""
+
+#: ics/head.php:80
+msgid "Insert Publisher"
+msgstr ""
+
+#: ics/head.php:88 ics/head.php:92
+msgid "Readers"
+msgstr ""
