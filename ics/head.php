@@ -1,8 +1,9 @@
 <?php
   session_start();
-  putenv('LC_ALL=de_DE');
-  setlocale(LC_MESSAGES, 'de_DE.UTF-8');
-  bindtextdomain("homelibrary", "locale");
+  $locale = 'el_GR';
+  putenv('LC_ALL='.$locale);
+  setlocale(LC_MESSAGES, $locale.'.UTF-8');
+  // bindtextdomain("homelibrary", "locale");
   textdomain("homelibrary");
   bind_textdomain_codeset("homelibrary", 'UTF-8');
   // $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
