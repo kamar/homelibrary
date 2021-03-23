@@ -23,6 +23,14 @@
     ?>
     <div class="container">
     <h2>Ενημέρωση Βιβλίου</h2>
+    <?php
+        if  (!isset($_SESSION['userid']) AND !isset($_SESSION['admin'])){
+          echo _('You must loged in to do this task as Administrator.');
+          // header("location:".$DOCUMENT_ROOT.'/user/login');
+          echo '<p><a href="'.'/user/login'.'">'._('Login').'</a></p>';
+          exit;
+        }
+      ?>
     <form method="post">
     <div class="row">
           <div class="col-25"><label for="isbn">ISBN:</label></div>

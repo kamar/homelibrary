@@ -1,5 +1,6 @@
 <?php
     session_start();
+    
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     require_once($DOCUMENT_ROOT.'/ics/head.php');    
 /*
@@ -20,6 +21,14 @@
 
 <div class="container">
     <h2>Εισαγωγή Αναγνώστη</h2>
+      <?php
+        if  (!isset($_SESSION['userid']) AND !isset($_SESSION['admin'])){
+          echo _('You must loged in to do this task as Administrator.');
+          // header("location:".$DOCUMENT_ROOT.'/user/login');
+          echo '<p><a href="'.$DOCUMENT_ROOT.'/user/login'.'">'._('Login').'</a></p>';
+          exit;
+        }
+      ?>
       <form name="newreader" action="/dist/php/insert_reader"  onsubmit="return val_form()" method="post">
         <div class="row">
           <div class="col-25"><label for="surname">Επώνυμο Αναγνώστη:</label></div>
