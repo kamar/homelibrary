@@ -1,16 +1,11 @@
 <?php
   session_start();
-  $locale = 'el_GR';
+  $locale = 'de_DE';
   putenv('LC_ALL='.$locale);
   setlocale(LC_MESSAGES, $locale.'.UTF-8');
   // bindtextdomain("homelibrary", "locale");
   textdomain("homelibrary");
   bind_textdomain_codeset("homelibrary", 'UTF-8');
-  // $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-  // require_once($DOCUMENT_ROOT."/dist/php/connect.php");
-  // require_once($DOCUMENT_ROOT."/user/inc/functions.inc.php");
-  // $user = 
-  // $pdo = pdo_homelibrary();
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,7 +29,7 @@
                 </button>
                 <div class="dropdown-content">
                 <a href="/pages/showbooks" id="showbooks" class="btn"><?php echo _('All Books'); ?></a>
-                <a href="/pages/showavailbooks" id="showavailbooks" class="btn"><?php echo _('Availble Books'); ?></a>
+                <a href="/pages/showavailbooks" id="showavailbooks" class="btn"><?php echo _('Available Books'); ?></a>
                 <?php
                   if (isset($_SESSION['userid']) AND isset($_SESSION['admin'])){
                     echo '<a href="/pages/newbook" id="newbook" class="btn">'._('Insert Book').'</a>';
@@ -91,8 +86,8 @@
                       </button>
                       <div class="dropdown-content">
                         <a href="/pages/readers" id="readers" class="btn">'. _('Readers').'</a>';
-                          echo '<a href="#" id="newreader" class="btn">Δανεισμός</a>';
-                          echo '<a href="/pages/newreader" id="newreader" class="btn">Εισαγωγή Αναγνώστη</a>
+                          echo '<a href="#" id="newreader" class="btn">'._('Loan a Book').'</a>';
+                          echo '<a href="/pages/newreader" id="newreader" class="btn">'._('New Reader').'</a>
                       </div>
                     </div>';
                   }
@@ -101,17 +96,17 @@
               <?php
                 if (isset($_SESSION['userid'])){
                   echo '<a href="/pages/readers">'.htmlentities($_SESSION['firstname']).'</a>';
-                  echo '<a id="logout" href="/user/logout">Logout</a>';  // onclick="btnHideShow(this)"
+                  echo '<a id="logout" href="/user/logout">'._('Logout').'</a>';  // onclick="btnHideShow(this)"
                 }
                 else{
-                  echo '<a id="registerme" href="/user/register">Register</a>';
-                  echo '<a id="login" href="/user/login">Login</a>';
+                  echo '<a id="registerme" href="/user/register">'._('Register').'</a>';
+                  echo '<a id="login" href="/user/login">'._('Login').'</a>';
                 }
               ?>
               </div>
               <div class="search-container">
                 <form action="/dist/php/search" method="post">
-                  <input type="search" name="mysearch" id="mySearch" placeholder="Search...">
+                  <input type="search" name="mysearch" id="mySearch" placeholder="<?php echo _('Search...'); ?>">
                   <button type="submit"><i class="fa fa-search"></i></button>
                 `</form>
               </div>

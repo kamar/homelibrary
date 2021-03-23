@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 23:41+0200\n"
-"PO-Revision-Date: 2021-03-22 23:45+0200\n"
+"POT-Creation-Date: 2021-03-23 18:03+0200\n"
+"PO-Revision-Date: 2021-03-23 18:08+0200\n"
 "Last-Translator: Konstas <marmako@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -19,69 +19,126 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#. $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-#. require_once($DOCUMENT_ROOT."/dist/php/connect.php");
-#. require_once($DOCUMENT_ROOT."/user/inc/functions.inc.php");
-#. $user =
-#. $pdo = pdo_homelibrary();
-#: ics/head.php:18
+#: ics/head.php:14
 msgid "Home Library"
 msgstr "Haus Bibliothek"
 
-#: ics/head.php:29
+#: ics/head.php:25
 msgid "Home"
 msgstr "Hause"
 
-#: ics/head.php:31
-#, fuzzy
+#: ics/head.php:27 app/php/authorsbooks.php:4
 msgid "Books"
-msgstr "Alle Bücher"
+msgstr "Bücher"
 
-#: ics/head.php:35
+#: ics/head.php:31
 msgid "All Books"
 msgstr "Alle Bücher"
 
-#: ics/head.php:36
-msgid "Availble Books"
-msgstr "Verfügbare Büche "
+#: ics/head.php:32
+msgid "Available Books"
+msgstr "Verfügbare Bücher"
 
-#: ics/head.php:39
+#: ics/head.php:35
 msgid "Insert Book"
 msgstr "Neues Buch"
 
-#: ics/head.php:40
-#, fuzzy
+#: ics/head.php:36
 msgid "Update Book"
 msgstr "Buch Update"
 
-#: ics/head.php:41
+#: ics/head.php:37
 msgid "Delete Book"
 msgstr "Buch Streichung"
 
-#: ics/head.php:47 ics/head.php:51
+#: ics/head.php:43 ics/head.php:47
 msgid "Authors"
 msgstr "Schriftteller"
 
-#: ics/head.php:54
+#: ics/head.php:50
 msgid "Insert Author"
 msgstr "Neuer Schiftteller"
 
-#: ics/head.php:60 ics/head.php:64
+#: ics/head.php:56 ics/head.php:60
 msgid "Translators"
 msgstr "Übersetzer"
 
-#: ics/head.php:67
+#: ics/head.php:63
 msgid "Insert Translator"
 msgstr "Neuer Übersetzer"
 
-#: ics/head.php:73 ics/head.php:77
+#: ics/head.php:69 ics/head.php:73
 msgid "Publishers"
 msgstr "Verleger"
 
-#: ics/head.php:80
+#: ics/head.php:76
 msgid "Insert Publisher"
 msgstr "Neuer Verleger"
 
-#: ics/head.php:88 ics/head.php:92
+#: ics/head.php:84 ics/head.php:88
 msgid "Readers"
 msgstr "Leser"
+
+#: ics/head.php:89
+msgid "Loan a Book"
+msgstr "Buch Verleihen"
+
+#: ics/head.php:90
+msgid "New Reader"
+msgstr "Leser"
+
+#: ics/head.php:99
+msgid "Logout"
+msgstr "Abmelden"
+
+#: ics/head.php:102
+msgid "Register"
+msgstr "Anmeldung"
+
+#: ics/head.php:103
+msgid "Login"
+msgstr "Melden"
+
+#: ics/head.php:109
+msgid "Search..."
+msgstr "Nachforschung..."
+
+#: app/php/authordetails.php:21
+msgid "Hide Books"
+msgstr "Verfügbare Bücher "
+
+#: app/php/authordetails.php:22
+msgid "Authors Books"
+msgstr "Schriftteller"
+
+#: app/php/authordetails.php:23
+msgid "Close"
+msgstr "Schließen"
+
+#: app/php/authordetails.php:25
+msgid "Fullname"
+msgstr "Voller Name"
+
+#: app/php/authorsbooks.php:18
+msgid "No books found."
+msgstr "Kein Buch gefunden."
+
+#: app/php/books.php:21 app/php/books.php:27
+msgid "Descr"
+msgstr "Beschreibung"
+
+#: app/php/books.php:24
+msgid "No description."
+msgstr "Keine Beschreibung."
+
+#: app/php/insert_author.php:57
+msgid "Full Name"
+msgstr "Voller Name"
+
+#: app/php/insert_author.php:63
+msgid "Site"
+msgstr "Seite"
+
+#: app/php/insert_author.php:66
+msgid "Bio"
+msgstr "Lebenslauf"

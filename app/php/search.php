@@ -10,7 +10,7 @@ require 'connect.php';
 
 $search_term = htmlspecialchars($_POST['mysearch']);
 
-if ($search_term = null OR strlen($search_term) == 0){
+if ($search_term == null OR strlen($search_term) == 0){
     echo '<div id="our-books">';
     echo '<div class="book-wrap">';
     echo '  <div class="book-title">Δεν έχετε εισάγει δεδομένα για αναζήτηση.</div>';

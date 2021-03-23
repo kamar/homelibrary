@@ -18,13 +18,13 @@
         echo '  <div class="book-title">'.$p['title'].'</div>';
         echo '  <div class="book-isbn">'.$p['isbn'].'</div>';
         if (strlen($p['back_page'])> 0){
-            echo '  <div class="book-desc" id="numpages">Descr: <span>'.set_string($p['back_page'], 25).'...</span></div>';
+            echo '  <div class="book-desc" id="numpages">'._('Descr').': '.'<span>'.set_string($p['back_page'], 25).'...</span></div>';
         }
         else if (strlen($p['back_page'])===0){
-            echo '  <div class="book-desc" id="numpages">Descr: <span>No description.</span></div>';
+            echo '  <div class="book-desc" id="numpages"><span>'._('No description.').'</span></div>';
         }
         else {
-          '  <div class="book-desc" id="numpages">Descr: <span>'.$p['back_page'].'</span></div>';
+          '  <div class="book-desc" id="numpages">'._('Descr').': '.'<span>'.$p['back_page'].'</span></div>';
         }
         
         echo '</div></a>';

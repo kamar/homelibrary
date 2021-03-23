@@ -51,19 +51,19 @@
             echo"<div class='modal-content'>";
               echo "<div class='modal-header'>";
                 echo '<span class="close">&times;</span>';
-                echo "<h2>Επιτυχής Εισαγωγή Συγγραφέα</h2>";
+                echo "<h2>'._('Author Successfully Inserted.').'</h2>";
               echo "</div>";
               echo '<div class="modal-body">';
-                  echo "<p>Ονοματεπώνυμο: ".$t['firstname']." ".$t['surname']."</p>";
+                  echo "<p>"._('Full Name').": ".$t['firstname']." ".$t['surname']."</p>";
               echo "</div>";
               echo '<div class="modal-body">';
                   echo "<p>Email: ".$t['email']."</p>";
               echo "</div>";
               echo '<div class="modal-body">';
-                  echo "<p>Ιστοσελίδα: ".$t['site']."</p>";
+                  echo "<p>"._('Site').": ".$t['site']."</p>";
               echo "</div>";
               echo '<div class="modal-body">';
-                  echo "<p>Βιογραφικό: ".$t['bio']."</p>";
+                  echo "<p>"._('Bio').": ".$t['bio']."</p>";
               echo "</div>";
                   }
     }
