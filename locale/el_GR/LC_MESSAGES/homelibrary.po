@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-23 18:05+0200\n"
-"PO-Revision-Date: 2021-03-23 18:07+0200\n"
+"POT-Creation-Date: 2021-03-23 19:25+0200\n"
+"PO-Revision-Date: 2021-03-23 19:29+0200\n"
 "Last-Translator: Konstas <marmako@gmail.com>\n"
 "Language-Team: Greek\n"
 "Language: el\n"
@@ -142,6 +142,41 @@ msgstr "Ιστοσελίδα"
 #: app/php/insert_author.php:66
 msgid "Bio"
 msgstr "Βιογραφικό"
+
+#.
+#. firstname
+#. surname
+#. email
+#. site
+#. bio
+#.
+#: pages/newauthor.php:16
+msgid "New Author"
+msgstr "Εισαγωγή Συγγραφέα"
+
+#: pages/newauthor.php:19 pages/newauthor.php:20
+msgid "Author's Name"
+msgstr "Όνομα Συγγραφέα"
+
+#: pages/newauthor.php:24 pages/newauthor.php:25
+msgid "Author's Surname"
+msgstr "Επίθετο Συγγραφέα"
+
+#: pages/newauthor.php:28 pages/newauthor.php:29
+msgid "Author's Email"
+msgstr "Email Συγγραφέα"
+
+#: pages/newauthor.php:32 pages/newauthor.php:33
+msgid "Author's Site"
+msgstr "Ιστοσελίδα Συγγραφέα"
+
+#: pages/newauthor.php:36
+msgid "Author's Resume"
+msgstr "Βιογραφικό Συγγραφέα"
+
+#: pages/newauthor.php:37
+msgid "Author's resume"
+msgstr "Βιογραφικό Συγγραφέα"
 
 #~ msgid "Βιβλία"
 #~ msgstr "Βιβλία"
