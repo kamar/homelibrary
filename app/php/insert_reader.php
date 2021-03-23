@@ -48,10 +48,11 @@
         $address = trim($_POST['address']);
         $city = trim($_POST['city']);
         $postal_code = trim($_POST['postal_code']);
+        $email = trim($_POST['email']);
 
         $con = pdo_homelibrary();
-        $query = "INSERT INTO tbl_readers (surname, firstname, father_name, mother_name, date_of_birth, sex, id_number, id_issue, address, city, postal_code)
-        VALUES (:surname, :firstname, :father_name, :mother_name, :date_of_birth, :sex, :id_number, :id_issue, :address, :city, :postal_code) RETURNING *";
+        $query = "INSERT INTO tbl_readers (surname, firstname, father_name, mother_name, date_of_birth, sex, id_number, id_issue, address, city, postal_code, email)
+        VALUES (:surname, :firstname, :father_name, :mother_name, :date_of_birth, :sex, :id_number, :id_issue, :address, :city, :postal_code, :email) RETURNING *";
 
         $result = $con->prepare($query);
         $result->bindParam(':surname', $surname, PDO::PARAM_STR);
@@ -65,6 +66,7 @@
         $result->bindParam(':address', $address, PDO::PARAM_STR);
         $result->bindParam(':city', $city, PDO::PARAM_STR);
         $result->bindParam(':postal_code', $postal_code, PDO::PARAM_STR);
+        $result->bindParam(':email', $email, PDO::PARAM_STR);
 
         try{
             $result->execute();
