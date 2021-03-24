@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-23 19:25+0200\n"
-"PO-Revision-Date: 2021-03-23 19:32+0200\n"
+"POT-Creation-Date: 2021-03-24 20:43+0200\n"
+"PO-Revision-Date: 2021-03-24 20:33+0200\n"
 "Last-Translator: Konstas <marmako@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -19,127 +19,132 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: ics/head.php:14
+#: ../ics/head.php:14
 msgid "Home Library"
 msgstr "Haus Bibliothek"
 
-#: ics/head.php:25
+#: ../ics/head.php:25
 msgid "Home"
 msgstr "Hause"
 
-#: ics/head.php:27 app/php/authorsbooks.php:4
+#: ../ics/head.php:27 ../app/php/authorsbooks.php:4
+#: ../dist/php/authorsbooks.php:4
 msgid "Books"
 msgstr "Bücher"
 
-#: ics/head.php:31
+#: ../ics/head.php:31
 msgid "All Books"
 msgstr "Alle Bücher"
 
-#: ics/head.php:32
+#: ../ics/head.php:32
 msgid "Available Books"
 msgstr "Verfügbare Bücher"
 
-#: ics/head.php:35
+#: ../ics/head.php:35
 msgid "Insert Book"
 msgstr "Neues Buch"
 
-#: ics/head.php:36
+#: ../ics/head.php:36
 msgid "Update Book"
 msgstr "Buch Update"
 
-#: ics/head.php:37
+#: ../ics/head.php:37
 msgid "Delete Book"
 msgstr "Buch Streichung"
 
-#: ics/head.php:43 ics/head.php:47
+#: ../ics/head.php:43 ../ics/head.php:47
 msgid "Authors"
 msgstr "Schriftteller"
 
-#: ics/head.php:50
+#: ../ics/head.php:50
 msgid "Insert Author"
 msgstr "Neuer Schiftteller"
 
-#: ics/head.php:56 ics/head.php:60
+#: ../ics/head.php:56 ../ics/head.php:60
 msgid "Translators"
 msgstr "Übersetzer"
 
-#: ics/head.php:63
+#: ../ics/head.php:63
 msgid "Insert Translator"
 msgstr "Neuer Übersetzer"
 
-#: ics/head.php:69 ics/head.php:73
+#: ../ics/head.php:69 ../ics/head.php:73
 msgid "Publishers"
 msgstr "Verleger"
 
-#: ics/head.php:76
+#: ../ics/head.php:76
 msgid "Insert Publisher"
 msgstr "Neuer Verleger"
 
-#: ics/head.php:84 ics/head.php:88
+#: ../ics/head.php:84 ../ics/head.php:88
 msgid "Readers"
 msgstr "Leser"
 
-#: ics/head.php:89
+#: ../ics/head.php:89
 msgid "Loan a Book"
 msgstr "Buch Verleihen"
 
-#: ics/head.php:90
+#: ../ics/head.php:90
 msgid "New Reader"
 msgstr "Leser"
 
-#: ics/head.php:99
+#: ../ics/head.php:99
 msgid "Logout"
 msgstr "Abmelden"
 
-#: ics/head.php:102
+#: ../ics/head.php:102
 msgid "Register"
 msgstr "Anmeldung"
 
-#: ics/head.php:103
+#. header("location:".$DOCUMENT_ROOT.'/user/login');
+#: ../ics/head.php:103 ../pages/newauthor.php:21 ../pages/newbook.php:32
+#: ../pages/newpublisher.php:24 ../pages/newreader.php:28
+#: ../pages/newtranslator.php:18 ../pages/updatebook.php:30
 msgid "Login"
 msgstr "Melden"
 
-#: ics/head.php:109
+#: ../ics/head.php:109
 msgid "Search..."
 msgstr "Nachforschung..."
 
-#: app/php/authordetails.php:21
+#: ../app/php/authordetails.php:21 ../dist/php/authordetails.php:21
 msgid "Hide Books"
 msgstr "Verfügbare Bücher "
 
-#: app/php/authordetails.php:22
+#: ../app/php/authordetails.php:22 ../dist/php/authordetails.php:22
 msgid "Authors Books"
 msgstr "Schriftteller"
 
-#: app/php/authordetails.php:23
+#: ../app/php/authordetails.php:23 ../dist/php/authordetails.php:23
 msgid "Close"
 msgstr "Schließen"
 
-#: app/php/authordetails.php:25
+#: ../app/php/authordetails.php:25 ../dist/php/authordetails.php:25
 msgid "Fullname"
 msgstr "Voller Name"
 
-#: app/php/authorsbooks.php:18
+#: ../app/php/authorsbooks.php:18 ../dist/php/authorsbooks.php:18
 msgid "No books found."
 msgstr "Kein Buch gefunden."
 
-#: app/php/books.php:21 app/php/books.php:27
+#: ../app/php/books.php:21 ../app/php/books.php:27 ../dist/php/books.php:21
+#: ../dist/php/books.php:27
 msgid "Descr"
 msgstr "Beschreibung"
 
-#: app/php/books.php:24
+#: ../app/php/books.php:24 ../dist/php/books.php:24
 msgid "No description."
 msgstr "Keine Beschreibung."
 
-#: app/php/insert_author.php:57
+#: ../app/php/insert_author.php:57 ../dist/php/insert_author.php:57
 msgid "Full Name"
 msgstr "Voller Name"
 
-#: app/php/insert_author.php:63
+#: ../app/php/insert_author.php:63 ../dist/php/insert_author.php:63
 msgid "Site"
 msgstr "Seite"
 
-#: app/php/insert_author.php:66
+#: ../app/php/insert_author.php:66 ../dist/php/insert_author.php:66
 msgid "Bio"
 msgstr "Lebenslauf"
 
@@ -150,30 +155,36 @@ msgstr "Lebenslauf"
 #. site
 #. bio
 #.
-#: pages/newauthor.php:16
+#: ../pages/newauthor.php:16
 msgid "New Author"
 msgstr "Neuer Schriftteller"
 
-#: pages/newauthor.php:19 pages/newauthor.php:20
+#: ../pages/newauthor.php:19 ../pages/newbook.php:30
+#: ../pages/newpublisher.php:22 ../pages/newreader.php:26
+#: ../pages/newtranslator.php:16 ../pages/updatebook.php:28
+msgid "You must loged in to do this task as Administrator."
+msgstr "Sie sollen als Admin angemeldet, um diese Function zu erledigen."
+
+#: ../pages/newauthor.php:27 ../pages/newauthor.php:28
 msgid "Author's Name"
 msgstr "Schrifttellers Name"
 
-#: pages/newauthor.php:24 pages/newauthor.php:25
+#: ../pages/newauthor.php:32 ../pages/newauthor.php:33
 msgid "Author's Surname"
 msgstr "Schrifttellers Familiename"
 
-#: pages/newauthor.php:28 pages/newauthor.php:29
+#: ../pages/newauthor.php:36 ../pages/newauthor.php:37
 msgid "Author's Email"
 msgstr "Schrifttellers Email"
 
-#: pages/newauthor.php:32 pages/newauthor.php:33
+#: ../pages/newauthor.php:40 ../pages/newauthor.php:41
 msgid "Author's Site"
 msgstr "Schrifttellers Seite"
 
-#: pages/newauthor.php:36
+#: ../pages/newauthor.php:44
 msgid "Author's Resume"
 msgstr "Schrifttellers Lebenslauf"
 
-#: pages/newauthor.php:37
+#: ../pages/newauthor.php:45
 msgid "Author's resume"
 msgstr "Schrifttellers Lebenslauf"

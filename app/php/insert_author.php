@@ -76,15 +76,15 @@
         echo"<div class='modal-content'>";
         echo "<div class='modal-header'>";
           echo '<span class="close">&times;</span>';
-          echo "<h2>Δεν έγινε εισαγωγή του συγγραφέα.</h2>";
+          echo "<h2>'._('Author doesn't inserted.').'</h2>";
         echo "</div>";
         echo "<div class='modal-body'>";
           echo "<h3>Exception: </h3>";
           if ($e->getCode() == '23502'){
-            echo "<p>Το όνομα και το επίθετο δεν πρέπει να είναι κενά.</p>";     
+            echo "<p>"._('The first name and the surname must be filled. Not null.')."</p>";     
           }
           elseif ($e->getCode() == '23514'){
-            echo "<p>Το όνομα και το επίθετο πρέπει να συμπληρωθούν σωστά.</p>";     
+            echo "<p>"._('The first name and the surname must be filled.')."</p>";     
           }
           echo "<p>".$e->getMessage()."</p>";
           // $errors = $result->errorInfo();

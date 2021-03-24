@@ -24,8 +24,8 @@
             echo '    </div>';
             echo '    <div id="fullname">'._('Fullname').': '.$au['firstname'].' '.$au['surname'].'</div>';
             echo '    <div>Email: '.$au['email'].'</div>';
-            echo '    <div>Internet: <a target="_blank" href="'.$au['site'].'">'.$au['site'].'</a></div>';
-            echo '    <div>Bio: '.$au['bio'].'</div>';
+            echo '    <div>'._('Internet').': <a target="_blank" href="'.$au['site'].'">'.$au['site'].'</a></div>';
+            echo '    <div>'._('Bio').': '.$au['bio'].'</div>';
             echo '<div id="txtHint"></div>';
             echo '</div>';
         }

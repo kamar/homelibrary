@@ -64,7 +64,7 @@ function showHint(str) {
 function hideBooks(){
     document.getElementById('txtHint').innerHTML= "";
     document.getElementById('hidebooks').style.display = 'none';
-    document.getElementById('translator_books').style.display = 'inline';
+    document.getElementById('authors_books').style.display = 'inline';
 }
 
 function showBooks(str){

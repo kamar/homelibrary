@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-23 19:25+0200\n"
-"PO-Revision-Date: 2021-03-23 19:29+0200\n"
+"POT-Creation-Date: 2021-03-24 20:43+0200\n"
+"PO-Revision-Date: 2021-03-24 20:26+0200\n"
 "Last-Translator: Konstas <marmako@gmail.com>\n"
 "Language-Team: Greek\n"
 "Language: el\n"
@@ -19,127 +19,132 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: ics/head.php:14
+#: ../ics/head.php:14
 msgid "Home Library"
 msgstr "Οικιακή Βιβλιοθήκη"
 
-#: ics/head.php:25
+#: ../ics/head.php:25
 msgid "Home"
 msgstr "Αρχική"
 
-#: ics/head.php:27 app/php/authorsbooks.php:4
+#: ../ics/head.php:27 ../app/php/authorsbooks.php:4
+#: ../dist/php/authorsbooks.php:4
 msgid "Books"
 msgstr "Βιβλία"
 
-#: ics/head.php:31
+#: ../ics/head.php:31
 msgid "All Books"
 msgstr "Όλα τα Βιβλία"
 
-#: ics/head.php:32
+#: ../ics/head.php:32
 msgid "Available Books"
 msgstr "Διαθέσιμα Βιβλία για Δανεισμό"
 
-#: ics/head.php:35
+#: ../ics/head.php:35
 msgid "Insert Book"
 msgstr "Εισαγωγή Βιβλίου"
 
-#: ics/head.php:36
+#: ../ics/head.php:36
 msgid "Update Book"
 msgstr "Ενημέρωση Βιβλίου"
 
-#: ics/head.php:37
+#: ../ics/head.php:37
 msgid "Delete Book"
 msgstr "Διαγραφή Βιβλίου"
 
-#: ics/head.php:43 ics/head.php:47
+#: ../ics/head.php:43 ../ics/head.php:47
 msgid "Authors"
 msgstr "Συγγραφείς"
 
-#: ics/head.php:50
+#: ../ics/head.php:50
 msgid "Insert Author"
 msgstr "Εισαγωγή Συγγραφέα"
 
-#: ics/head.php:56 ics/head.php:60
+#: ../ics/head.php:56 ../ics/head.php:60
 msgid "Translators"
 msgstr "Μεταφραστές"
 
-#: ics/head.php:63
+#: ../ics/head.php:63
 msgid "Insert Translator"
 msgstr "Εισαγωγή Μεταφραστή"
 
-#: ics/head.php:69 ics/head.php:73
+#: ../ics/head.php:69 ../ics/head.php:73
 msgid "Publishers"
 msgstr "Εκδότες"
 
-#: ics/head.php:76
+#: ../ics/head.php:76
 msgid "Insert Publisher"
 msgstr "Εισαγωγή Εκδότη"
 
-#: ics/head.php:84 ics/head.php:88
+#: ../ics/head.php:84 ../ics/head.php:88
 msgid "Readers"
 msgstr "Αναγνώστες"
 
-#: ics/head.php:89
+#: ../ics/head.php:89
 msgid "Loan a Book"
 msgstr "Δανεισμός Βιβλίου"
 
-#: ics/head.php:90
+#: ../ics/head.php:90
 msgid "New Reader"
 msgstr "Εισαγωγή Αναγνώστη"
 
-#: ics/head.php:99
+#: ../ics/head.php:99
 msgid "Logout"
 msgstr "Αποσύνδεση"
 
-#: ics/head.php:102
+#: ../ics/head.php:102
 msgid "Register"
 msgstr "Εγγραφή"
 
-#: ics/head.php:103
+#. header("location:".$DOCUMENT_ROOT.'/user/login');
+#: ../ics/head.php:103 ../pages/newauthor.php:21 ../pages/newbook.php:32
+#: ../pages/newpublisher.php:24 ../pages/newreader.php:28
+#: ../pages/newtranslator.php:18 ../pages/updatebook.php:30
 msgid "Login"
 msgstr "Σύνδεση"
 
-#: ics/head.php:109
+#: ../ics/head.php:109
 msgid "Search..."
 msgstr "Αναζήτηση..."
 
-#: app/php/authordetails.php:21
+#: ../app/php/authordetails.php:21 ../dist/php/authordetails.php:21
 msgid "Hide Books"
 msgstr "Απόκρυψη Βιβλίων"
 
-#: app/php/authordetails.php:22
+#: ../app/php/authordetails.php:22 ../dist/php/authordetails.php:22
 msgid "Authors Books"
 msgstr "Βιβλία του Συγγραφέα"
 
-#: app/php/authordetails.php:23
+#: ../app/php/authordetails.php:23 ../dist/php/authordetails.php:23
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: app/php/authordetails.php:25
+#: ../app/php/authordetails.php:25 ../dist/php/authordetails.php:25
 msgid "Fullname"
 msgstr "Ονοματεπώνυμο"
 
-#: app/php/authorsbooks.php:18
+#: ../app/php/authorsbooks.php:18 ../dist/php/authorsbooks.php:18
 msgid "No books found."
 msgstr "Δεν βρέθηκαν βιβλία."
 
-#: app/php/books.php:21 app/php/books.php:27
+#: ../app/php/books.php:21 ../app/php/books.php:27 ../dist/php/books.php:21
+#: ../dist/php/books.php:27
 msgid "Descr"
 msgstr "Περιγραφή"
 
-#: app/php/books.php:24
+#: ../app/php/books.php:24 ../dist/php/books.php:24
 msgid "No description."
 msgstr "Δεν υπάρχει περιγραφή."
 
-#: app/php/insert_author.php:57
+#: ../app/php/insert_author.php:57 ../dist/php/insert_author.php:57
 msgid "Full Name"
 msgstr "Ονοματεπώνυμο"
 
-#: app/php/insert_author.php:63
+#: ../app/php/insert_author.php:63 ../dist/php/insert_author.php:63
 msgid "Site"
 msgstr "Ιστοσελίδα"
 
-#: app/php/insert_author.php:66
+#: ../app/php/insert_author.php:66 ../dist/php/insert_author.php:66
 msgid "Bio"
 msgstr "Βιογραφικό"
 
@@ -150,31 +155,37 @@ msgstr "Βιογραφικό"
 #. site
 #. bio
 #.
-#: pages/newauthor.php:16
+#: ../pages/newauthor.php:16
 msgid "New Author"
 msgstr "Εισαγωγή Συγγραφέα"
 
-#: pages/newauthor.php:19 pages/newauthor.php:20
+#: ../pages/newauthor.php:19 ../pages/newbook.php:30
+#: ../pages/newpublisher.php:22 ../pages/newreader.php:26
+#: ../pages/newtranslator.php:16 ../pages/updatebook.php:28
+msgid "You must loged in to do this task as Administrator."
+msgstr "Πρέπει να συνδεθείτε ως Διαχειριστής για τη συγκεκριμένη λειτουργία."
+
+#: ../pages/newauthor.php:27 ../pages/newauthor.php:28
 msgid "Author's Name"
 msgstr "Όνομα Συγγραφέα"
 
-#: pages/newauthor.php:24 pages/newauthor.php:25
+#: ../pages/newauthor.php:32 ../pages/newauthor.php:33
 msgid "Author's Surname"
 msgstr "Επίθετο Συγγραφέα"
 
-#: pages/newauthor.php:28 pages/newauthor.php:29
+#: ../pages/newauthor.php:36 ../pages/newauthor.php:37
 msgid "Author's Email"
 msgstr "Email Συγγραφέα"
 
-#: pages/newauthor.php:32 pages/newauthor.php:33
+#: ../pages/newauthor.php:40 ../pages/newauthor.php:41
 msgid "Author's Site"
 msgstr "Ιστοσελίδα Συγγραφέα"
 
-#: pages/newauthor.php:36
+#: ../pages/newauthor.php:44
 msgid "Author's Resume"
 msgstr "Βιογραφικό Συγγραφέα"
 
-#: pages/newauthor.php:37
+#: ../pages/newauthor.php:45
 msgid "Author's resume"
 msgstr "Βιογραφικό Συγγραφέα"
 
