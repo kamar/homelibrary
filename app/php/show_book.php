@@ -99,6 +99,9 @@
                 }
                 echo "<li>Back Page: ".$b['back_page']."</li>";
                 echo '</ol>';
+                // echo "<div class='bookimage'>
+                //       <h1>Image Place</h1>
+                // </div>";
               echo "</div>";
                   }
                   else{

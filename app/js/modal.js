@@ -12,14 +12,14 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
   modal.style.display = "none";
   // setTimeout(window.location.replace("http://homelibrary.me"), 100)
-  setTimeout(window.history.back(), 100)
+  setTimeout(window.history.go(-1), 100)
 }
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
     // setTimeout(window.location.replace("http://homelibrary.me"), 100);
-    setTimeout(window.history.back(), 100)
+    setTimeout(window.history.go(-1), 100)
   }
 }
 // When the user clicks the button, open the modal 

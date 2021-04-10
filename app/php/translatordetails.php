@@ -11,7 +11,7 @@
 
     $result->execute();
     $translator = $result->fetchAll();
-
+    echo "<h1>"._("Translators")."</h1>";
     if (sizeof($translator)== 1){
         foreach ($translator as $tr){
             //  TODO: Formatting and php code in database. Button for writer's books.

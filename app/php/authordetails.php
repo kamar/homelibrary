@@ -12,7 +12,9 @@
 
     $result->execute();
     $author = $result->fetchAll();
-    
+
+    echo "<h1>Συγγραφείς</h1>";
+
     if (sizeof($author)== 1){
         foreach ($author as $au){
             //  TODO: Formatting and php code in database. Button for writer's books.

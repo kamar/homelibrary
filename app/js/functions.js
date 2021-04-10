@@ -42,7 +42,8 @@ function toggle_inputs(status=true){
 }
 
 function goBack() {
-    window.history.back();
+    // window.history.back();
+    history.go(-1);
   }
 
 function showHint(str) {

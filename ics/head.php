@@ -1,8 +1,9 @@
 <?php
   session_start();
   $locale = 'de_DE';
-  putenv('LC_ALL='.$locale);
+  // echo locale_get_default();
   setlocale(LC_MESSAGES, $locale.'.UTF-8');
+  putenv('LC_ALL='.$locale);
   // bindtextdomain("homelibrary", "locale");
   textdomain("homelibrary");
   bind_textdomain_codeset("homelibrary", 'UTF-8');
@@ -19,6 +20,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="/dist/style.css" rel="stylesheet">
+    <script>
+      function myFunction(){
+        document.getElementById("locale").submit();
+      }
+    </script>
   </head>
   <body>
       <nav id="testmenu" class="navbar">
@@ -78,6 +84,15 @@
                   ?>
                 </div>
               </div>
+              <!-- <div class="language-selector">
+                <form  id="locale" action="" method="post" onchange="myFunction()">
+                  <select name="locale">
+                    <option value="de_DE">German</option>
+                    <option value="us_US">English</option>
+                    <option value="el_GR">Greek</option>
+                  </select>
+                </form>
+              </div> -->
                   <?php
                   if (isset($_SESSION['userid']) AND isset($_SESSION['admin'])){
                     echo '<div class="dropdown">

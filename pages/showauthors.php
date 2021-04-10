@@ -1,5 +1,6 @@
 
     <?php
+    // Shows the authors.
         $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
         // TODO: Formating.
         session_start();

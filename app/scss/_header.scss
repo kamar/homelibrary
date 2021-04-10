@@ -57,7 +57,18 @@
     overflow: hidden;
   }
 
-  .navbar .search-container {
+  .navbar .language-selector{
+    display: inline;
+    margin-right: 5px;
+
+    select{
+      padding: 6px;
+      margin-top: 8px;
+      width: 90px;
+    }
+  }
+
+  .navbar .search-container, .navbar .language-selector{
     float: right;
   }
   
