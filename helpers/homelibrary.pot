@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-24 20:43+0200\n"
+"POT-Creation-Date: 2021-04-10 22:07+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,108 +17,119 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../ics/head.php:14
+#: ../ics/head.php:15
 msgid "Home Library"
 msgstr ""
 
-#: ../ics/head.php:25
+#: ../ics/head.php:31
 msgid "Home"
 msgstr ""
 
-#: ../ics/head.php:27 ../app/php/authorsbooks.php:4
+#: ../ics/head.php:33 ../app/php/authorsbooks.php:4
 #: ../dist/php/authorsbooks.php:4
 msgid "Books"
 msgstr ""
 
-#: ../ics/head.php:31
+#: ../ics/head.php:37
 msgid "All Books"
 msgstr ""
 
-#: ../ics/head.php:32
+#: ../ics/head.php:38
 msgid "Available Books"
 msgstr ""
 
-#: ../ics/head.php:35
+#: ../ics/head.php:41
 msgid "Insert Book"
 msgstr ""
 
-#: ../ics/head.php:36
+#: ../ics/head.php:42
 msgid "Update Book"
 msgstr ""
 
-#: ../ics/head.php:37
+#: ../ics/head.php:43
 msgid "Delete Book"
 msgstr ""
 
-#: ../ics/head.php:43 ../ics/head.php:47
+#: ../ics/head.php:49 ../ics/head.php:53
 msgid "Authors"
 msgstr ""
 
-#: ../ics/head.php:50
+#: ../ics/head.php:56
 msgid "Insert Author"
 msgstr ""
 
-#: ../ics/head.php:56 ../ics/head.php:60
+#: ../ics/head.php:62 ../ics/head.php:66 ../app/php/translatordetails.php:14
+#: ../dist/php/translatordetails.php:14
 msgid "Translators"
 msgstr ""
 
-#: ../ics/head.php:63
+#: ../ics/head.php:69
 msgid "Insert Translator"
 msgstr ""
 
-#: ../ics/head.php:69 ../ics/head.php:73
+#: ../ics/head.php:75 ../ics/head.php:79
 msgid "Publishers"
 msgstr ""
 
-#: ../ics/head.php:76
+#: ../ics/head.php:82
 msgid "Insert Publisher"
 msgstr ""
 
-#: ../ics/head.php:84 ../ics/head.php:88
+#: ../ics/head.php:99 ../ics/head.php:103
 msgid "Readers"
 msgstr ""
 
-#: ../ics/head.php:89
+#: ../ics/head.php:104
 msgid "Loan a Book"
 msgstr ""
 
-#: ../ics/head.php:90
+#: ../ics/head.php:105
 msgid "New Reader"
 msgstr ""
 
-#: ../ics/head.php:99
+#: ../ics/head.php:114
 msgid "Logout"
 msgstr ""
 
-#: ../ics/head.php:102
+#: ../ics/head.php:117
 msgid "Register"
 msgstr ""
 
 #. header("location:".$DOCUMENT_ROOT.'/user/login');
-#: ../ics/head.php:103 ../pages/newauthor.php:21 ../pages/newbook.php:32
+#: ../ics/head.php:118 ../pages/newauthor.php:21 ../pages/newbook.php:32
 #: ../pages/newpublisher.php:24 ../pages/newreader.php:28
 #: ../pages/newtranslator.php:18 ../pages/updatebook.php:30
+#: ../user/login.php:79
 msgid "Login"
 msgstr ""
 
-#: ../ics/head.php:109
+#: ../ics/head.php:124
 msgid "Search..."
 msgstr ""
 
-#: ../app/php/authordetails.php:21 ../dist/php/authordetails.php:21
+#: ../app/php/authordetails.php:23 ../dist/php/authordetails.php:23
 msgid "Hide Books"
 msgstr ""
 
-#: ../app/php/authordetails.php:22 ../dist/php/authordetails.php:22
+#: ../app/php/authordetails.php:24 ../dist/php/authordetails.php:24
 msgid "Authors Books"
 msgstr ""
 
-#: ../app/php/authordetails.php:23 ../dist/php/authordetails.php:23
+#: ../app/php/authordetails.php:25 ../dist/php/authordetails.php:25
 msgid "Close"
 msgstr ""
 
-#: ../app/php/authordetails.php:25 ../dist/php/authordetails.php:25
+#: ../app/php/authordetails.php:27 ../dist/php/authordetails.php:27
 msgid "Fullname"
+msgstr ""
+
+#: ../app/php/authordetails.php:29 ../dist/php/authordetails.php:29
+msgid "Internet"
+msgstr ""
+
+#: ../app/php/authordetails.php:30 ../app/php/insert_author.php:66
+#: ../dist/php/authordetails.php:30 ../dist/php/insert_author.php:66
+msgid "Bio"
 msgstr ""
 
 #: ../app/php/authorsbooks.php:18 ../dist/php/authorsbooks.php:18
@@ -142,8 +153,12 @@ msgstr ""
 msgid "Site"
 msgstr ""
 
-#: ../app/php/insert_author.php:66 ../dist/php/insert_author.php:66
-msgid "Bio"
+#: ../app/php/insert_author.php:84 ../dist/php/insert_author.php:84
+msgid "The first name and the surname must be filled. Not null."
+msgstr ""
+
+#: ../app/php/insert_author.php:87 ../dist/php/insert_author.php:87
+msgid "The first name and the surname must be filled."
 msgstr ""
 
 #.
@@ -185,4 +200,16 @@ msgstr ""
 
 #: ../pages/newauthor.php:45
 msgid "Author's resume"
+msgstr ""
+
+#: ../user/login.php:68 ../user/login.php:69
+msgid "Password"
+msgstr ""
+
+#: ../user/login.php:74
+msgid "Stay logged in"
+msgstr ""
+
+#: ../user/login.php:83
+msgid "Password forgotten"
 msgstr ""

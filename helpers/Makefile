@@ -10,4 +10,4 @@ merge:
 	# rm homelibrary.po_new
 
 newstrings:
-	xgettext -Lphp --from-code=UTF-8 --add-comments ../ics/*.php ../app/php/*.php ../dist/php/*.php ../pages/*.php -o  homelibrary.pot
+	xgettext -Lphp --from-code=UTF-8 --add-comments ../ics/*.php ../app/php/*.php ../dist/php/*.php ../pages/*.php ../user/*.php ../user/inc/*.php -o  homelibrary.pot

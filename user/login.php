@@ -65,22 +65,22 @@ if(isset($error_msg) && !empty($error_msg)) {
 		<div class="col-45"><input type="email" name="email" id="inputEmail" placeholder="E-Mail" value="<?php echo $email_value; ?>" required autofocus></div>
 	</div>
 	<div class="row">
-		<div class="col-25"><label for="inputPassword">Passwort</label></div>
-		<div class="col-45"><input type="password" name="passwort" id="inputPassword" placeholder="Passwort" required></div>
+		<div class="col-25"><label for="inputPassword"><?php echo _("Password"); ?></label></div>
+		<div class="col-45"><input type="password" name="passwort" id="inputPassword" placeholder="<?php echo _("Password"); ?>" required></div>
 	</div>
 	<div class="row">
 	  <div class=" col-25 col-45">
 		  <label>
-				  <input type="checkbox" value="remember-me" name="angemeldet_bleiben" value="1" checked> Angemeldet bleiben
+				  <input type="checkbox" value="remember-me" name="angemeldet_bleiben" value="1" checked> <?php echo _("Stay logged in");?>
 		  </label>
 	  </div>
 	</div>
 	<div class="row">
-		<div class="col-45"><input type="submit"></div>
+		<div class="col-45"><input type="submit" value="<?php echo _("Login"); ?>"></div>
 	</div>
 	
 	<div class="row">
-		<div class="col-45"><a href="passwortvergessen">Passwort vergessen</a></div>
+		<div class="col-45"><a href="passwortvergessen"><?php echo _("Password forgotten"); ?></a></div>
 	</div>
   </form>
 

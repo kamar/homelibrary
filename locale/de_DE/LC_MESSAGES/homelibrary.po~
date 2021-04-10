@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-10 22:07+0300\n"
-"PO-Revision-Date: 2021-04-10 22:09+0300\n"
+"POT-Creation-Date: 2021-04-10 21:51+0300\n"
+"PO-Revision-Date: 2021-04-10 21:56+0300\n"
 "Last-Translator: Konstas <marmako@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -203,14 +203,6 @@ msgstr "Schrifttellers Lebenslauf"
 #: ../pages/newauthor.php:45
 msgid "Author's resume"
 msgstr "Schrifttellers Lebenslauf"
-
-#: ../user/login.php:68 ../user/login.php:69
-msgid "Password"
-msgstr "Passwort"
-
-#: ../user/login.php:74
-msgid "Stay logged in"
-msgstr "Angemeldet bleiben"
 
 #: ../user/login.php:83
 msgid "Password forgotten"
